@@ -7,6 +7,9 @@
     <title>Header</title>
     <script src="https://kit.fontawesome.com/6d49b9dc2e.js" crossorigin="anonymous"></script>
     <style>
+        body{
+            height: 200vh;
+        }
         *{
             margin: 0px;padding: 0px;
         }
@@ -45,7 +48,8 @@
             padding: 12px;
         }
         #thirddiv{
-            width: 100%;height: 50px;background-color: #dd0285;display: flex;justify-content: space-evenly;align-items: center
+            width: 100%;height: 50px;background-color: #dd0285;display: flex;justify-content: space-evenly;align-items: center;
+            position: sticky;top: 0px;
         }
         #categoryselector>select{
             background-color: #dd0285;color: white;font-weight: bold;font-size: 14px;margin-right: 15px;border: 0px;
@@ -262,11 +266,11 @@
     </div>
     <div id="thirddiv">
             <div id="categoryselector">
-                <select name="makeup" id="">
-                    <option value="makeup">MAKEUP</option>
+                <select name="" id="">
+                    <option value="none">MAKEUP</option>
                 </select>
                 <select name="skin" id="">
-                    <option value="makeup">SKIN</option>
+                    <option value="skin">SKIN</option>
                 </select>
                 <select name="hair" id="">
                     <option value="makeup">HAIR</option>
