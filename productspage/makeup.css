@@ -1,9 +1,5 @@
-body{
-    display: flex;
-    justify-content: right;
-}
 #container{
-    border : 1px solid red;
+    /* border : 1px solid red; */
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: auto;
@@ -11,44 +7,65 @@ body{
     box-sizing: border-box;
 }
 #container>div{
-    border: 1px solid green;
+    border: 1px solid rgb(224, 224, 224);
     padding-left: 30px;
     padding-right: 30px;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    /* box-sizing: border-box; */
+    position: relative;
 }
 #container img{
     width: 100%;
+    display: block;
+    margin: auto;
 }
 #logo{
     background-color: #DD0285;
     padding: 15px 10px 15px 10px;
     border-radius: 70%;
-    position: relative;
-    left: 80%;  
-    bottom: 55%;
+    position: absolute;
+    top: 15px;
+    right: 15px;
     color: white;
 }
-#container>div>div{
+#namebox{
+    height: 60px;
+    /* border: 1px solid teal; */
+    font-size: 14px;
+}
+#pricebox{
     width: 200px;
     display: flex;
     justify-content: space-between;
     /* border: 1px solid brown; */
     margin: auto;
-    margin-top: -20px;
+    margin-top: 0px;
+    /* margin-bottom: 70px; */
 }
 strike{
-    margin-top: 20px;
-    color: rgb(63, 63, 63);
-    font-weight: 500;
+    margin-top: 23px;
+    color: rgb(131, 126, 126);
+    font-weight: 600;
 }
 strike+p{
     font-weight: bolder;
     font-size: 20px;
-    color: rgb(2, 73, 2);
+    color: #DD0285;
 }
 p+p{
-    font-weight: 900px;
-    margin-top: 20px;
+    font-weight: bold;
+    margin-top: 23px;
+    color: green;
+}
+#cartbox{
+    /* border: 1px solid purple; */
+    /* position: absolute; */
+    bottom: 10px;
+    display: flex;
+    width: 170px;
+    margin: auto;
+    height: 30px;
 }
 
 #cart{
@@ -58,11 +75,12 @@ p+p{
     border: 0px;
     padding: 5px 15px 5px 20px;
     color: white;
-    margin-top: 20px;
+    
 }
 #wish{
-    margin-top: 20px;
+
     background-color: black;
     color: white;
     
 }
+
