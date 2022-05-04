@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,100&display=swap" rel="stylesheet">
+    <style>
+        #firstbox{
+            width: 85%;height: 400px;border: 1px solid black;margin: auto;display: flex;
+        }
+        #homecategory{
+            width: 25%;height: 100%;border: 2px solid blue;padding-left: 20px;
+        }
+        #homecategory>p{
+            margin-left: ;
+        }
+        #homeslidingimg{
+            width: 75%;height: 100%;
+        }
+        #homeslidingimg>img{
+            height: 90%;width:100%;
+        }
+        #secondbox{
+            width: 85%;margin: auto;margin-top: 10px;border: 1px solid blue;
+        }
+        #secondbox>img{
+            width: 100%;height: auto;
+        }
+        #secondbox>h3{
+            font-weight: 100;margin-bottom: 0px;
+        }
+        #thirdbox{
+            border: 0px solid red;height: auto;margin: auto;
+            width: 85%;display: flex;
+            box-sizing: border-box;overflow: scroll;
+            /* display: grid;grid-template-columns: repeat(4,1fr);grid-template-rows: 1 auto; */
+            
+        }
+        #innerbox{
+            box-sizing: border-box;padding: 20px 20px 0px 20px;border: 1px solid grey;height: auto;
+            width: 25%;
+        }
+        #innerbox>img,#innerbox>p,#innerbox>div{
+            margin: auto;text-align: center;
+        }
+        #innerbox>img{
+            height: 60%;display: block;align-items: center;
+        }
+        #productname{
+            color: rgb(16, 16, 16)
+        }
+        #star+p{
+            margin-bottom: 10px;margin-top: 10px;
+        }
+        .fa-star{
+            font-size: 10px; color: grey;
+        }
+        #strikeprice{
+            color: grey;font-weight: lighter;margin-right: 5px;
+        }
+        #discountedprice{
+            font-weight: bold;color: #dd0285;margin-right: 5px;
+        }
+        #discount{
+            color: green;font-weight: bold;
+        }
+        #addcart{
+            margin: auto;border: 0px solid blue;
+        }
+        .fa-bag-shopping{
+            margin-right: 7px;
+        }
+        #addcart>button:nth-child(1){
+            padding: 5px 20px;border-radius: 2px;border: 0px;background-color:#dd0285;color: white;
+        }
+        #addcart>button:nth-child(2){
+            padding: 5px 10px;border-radius: 2px;border: 0px;background-color:gray;color: white;
+        }
+        #fourthbox{
+            display: grid;grid-template-columns: repeat(2,1fr);width: 85%;grid-template-rows: 1 auto;margin: auto;gap: 0px 30px;
+            margin-top: 20px;            
+        }
+        #fourthbox>img{
+            width: 100%;box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
+        #fifthbox1{
+            width: 85%;height: auto;border: 1px solid salmon;margin: auto;margin-top: 20px;
+            border: 0px solid grey;display: grid;grid-template-columns: repeat(7,1fr);
+        }
+        #fifthbox1>div{
+            border: 1px solid grey;
+        }
+        #fifthbox1>div:hover{
+            background-color: #dd0285;color: white;
+        }
+        #fifthbox1>div>img{
+            height: 40%;display: block;margin: auto;margin-top: 10px;
+        }
+        #fifthbox1>div>img:hover{
+            color: white;
+        }
+        #fifthbox1>div>p{
+            text-align: center;margin-top: 5px;margin-bottom: 0px;
+        }
+        #fifthbox2{
+            width: 85%;margin: auto;border: 1px solid saddlebrown;display: flex;
+        }
+        #sixthbox{
+            display: grid;grid-template-columns: repeat(3,1fr);grid-template-rows: 1 auto;gap: 30px;border: 0px solid red;
+            width: 85%;margin: auto;margin-top: 10px;
+        }
+        #sixthboxinnerbox{
+            border: 0px solid gray;
+        }
+        #sixthboxinnerbox>h4{
+            font-weight: 100;font-family: sans-serif;margin-bottom: 5px;
+        }
+        #sixthboxinnerbox>div{
+            border: 1px solid gray;height: auto;width: 100%;display: flex;padding: 15px 0px;
+        }
+        #sixthboxinnerboximg{
+            width: 35%;height: 100%;
+        }
+        #sixthboxinnerboximg>img{
+            width: 100%;height: auto;
+        }
+        #sixthboxinnerboxdata{
+            width: 60%;height: 100%;
+        }
+        #seventhbox{
+            width: 85%;margin: auto;margin-top: 30px;
+        }
+        #seventhbox>img{
+            width: 100%;
+        }
+        #eighthbox{
+            width: 85%;margin: auto;font-size: 26px;color: grey;font-weight: 500;font-family: sans-serif;
+        }
+        #ninthbox{
+            width: 85%;margin: auto;box-sizing: border-box;
+        }
+        #ninthbox>p{
+            font-size: 14px;font-family: 'Roboto', sans-serif;
+        }
+        #ninthbox>p>#link{
+            font-weight: bold;
+        }
+        #ninthbox>p>#bold{
+            font-weight: 550;
+        }
+    </style>
+</head>
+<body>
+    <div id="firstbox">
+        <div id="homecategory">
+            <h3>ALL CATEGORIES</h3>
+            <P><img src="https://www.beautybebo.com/pub/media/wysiwyg/menu-icons/makeup-small.png" alt=""> Makeup</P>
+            <p><img src="https://www.beautybebo.com/pub/media/wysiwyg/menu-icons/skin-small.png" alt=""> Skin</p>
+            <p><img src="https://www.beautybebo.com/pub/media/wysiwyg/menu-icons/hair-small.png" alt=""> Hair</p>
+            <p><img src="https://www.beautybebo.com/pub/media/wysiwyg/menu-icons/personal-care-small.png" alt=""> Personal Care</p>
+            <p><img src="https://www.beautybebo.com/pub/media/wysiwyg/menu-icons/mom-baby-care-small.png" alt=""> Mom & Baby Care</p>
+            <p><img src="https://www.beautybebo.com/pub/media/fragrance.png" alt=""> Fragrance</p>
+            <p><img src="https://www.beautybebo.com/pub/media/ayurveda.png" alt=""> Ayurveda</p>
+        </div>
+        <div id="homeslidingimg">
+            <img src="https://www.beautybebo.com/pub/media/mega-menu/slider-2.jpg" alt="">
+        </div>
+    </div>
+    <div id="secondbox">
+        <img src="https://www.beautybebo.com/pub/media/blue_heaven.jpg" alt="">
+        <h3 id="nwar">NEW ARRIVALS!</h3>
+    </div>
+    <div id="thirdbox">
+        <div id="innerbox">
+            <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/8/8/88b239c8904311904281__1_.jpg" alt="">
+            <p id="productname">WOW Skin Science Himalayan Rose Conditioner</p>
+            <div id="star">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+            <p ><strike id="strikeprice">₹449.00</strike> <span id="discountedprice">₹395.00</span><span id="discount">10% off</span></p>
+            <div id="addcart">
+                <button><i class="fa-solid fa-bag-shopping"></i>Add to Cart</button>
+                <button><i class="fa-solid fa-heart"></i></button>
+            </div>
+        </div>
+        <div id="innerbox">
+            <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/8/8/88b239c8904311904281__1_.jpg" alt="">
+            <p>WOW Skin Science Himalayan Rose Conditioner</p>
+            <div id="star">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+            <p><strike id="strikeprice">₹449.00</strike> <span id="discountedprice">₹395.00</span><span id="discount">10% off</span></p>
+            <div id="addcart">
+                <button><i class="fa-solid fa-bag-shopping"></i>Add to Cart</button>
+                <button><i class="fa-solid fa-heart"></i></button>
+            </div>
+        </div>
+        <div id="innerbox">
+            <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/8/8/88b239c8904311904281__1_.jpg" alt="">
+            <p>WOW Skin Science Himalayan Rose Conditioner</p>
+            <div id="star">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+            <p><strike id="strikeprice">₹449.00</strike> <span id="discountedprice">₹395.00</span><span id="discount">10% off</span></p>
+            <div id="addcart">
+                <button><i class="fa-solid fa-bag-shopping"></i>Add to Cart</button>
+                <button><i class="fa-solid fa-heart"></i></button>
+            </div>
+        </div>
+        <div id="innerbox">
+            <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/8/8/88b239c8904311904281__1_.jpg" alt="">
+            <p>WOW Skin Science Himalayan Rose Conditioner</p>
+            <div id="star">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+            <p><strike id="strikeprice">₹449.00</strike> <span id="discountedprice">₹395.00</span><span id="discount">10% off</span></p>
+            <div id="addcart">
+                <button><i class="fa-solid fa-bag-shopping"></i>Add to Cart</button>
+                <button><i class="fa-solid fa-heart"></i></button>
+            </div>
+        </div>
+        <div id="innerbox">
+            <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/8/8/88b239c8904311904281__1_.jpg" alt="">
+            <p>WOW Skin Science Himalayan Rose Conditioner</p>
+            <div id="star">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+            <p><strike id="strikeprice">₹449.00</strike> <span id="discountedprice">₹395.00</span><span id="discount">10% off</span></p>
+            <div id="addcart">
+                <button><i class="fa-solid fa-bag-shopping"></i>Add to Cart</button>
+                <button><i class="fa-solid fa-heart"></i></button>
+            </div>
+        </div>
+        <div id="innerbox">
+            <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/8/8/88b239c8904311904281__1_.jpg" alt="">
+            <p>WOW Skin Science Himalayan Rose Conditioner</p>
+            <div id="star">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+            <p><strike id="strikeprice">₹449.00</strike> <span id="discountedprice">₹395.00</span><span id="discount">10% off</span></p>
+            <div id="addcart">
+                <button><i class="fa-solid fa-bag-shopping"></i>Add to Cart</button>
+                <button><i class="fa-solid fa-heart"></i></button>
+            </div>
+        </div>
+        <div id="innerbox">
+            <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/8/8/88b239c8904311904281__1_.jpg" alt="">
+            <p>WOW Skin Science Himalayan Rose Conditioner</p>
+            <div id="star">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+            <p><strike id="strikeprice">₹449.00</strike> <span id="discountedprice">₹395.00</span><span id="discount">10% off</span></p>
+            <div id="addcart">
+                <button><i class="fa-solid fa-bag-shopping"></i>Add to Cart</button>
+                <button><i class="fa-solid fa-heart"></i></button>
+            </div>
+        </div>
+        <div id="innerbox">
+            <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/8/8/88b239c8904311904281__1_.jpg" alt="">
+            <p>WOW Skin Science Himalayan Rose Conditioner</p>
+            <div id="star">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+            <p><strike id="strikeprice">₹449.00</strike> <span id="discountedprice">₹395.00</span><span id="discount">10% off</span></p>
+            <div id="addcart">
+                <button><i class="fa-solid fa-bag-shopping"></i>Add to Cart</button>
+                <button><i class="fa-solid fa-heart"></i></button>
+            </div>
+        </div>
+    </div>
+    <div id="fourthbox">
+        <img src="https://www.beautybebo.com/pub/media/mega-menu/beeone.jpg" alt="">
+        <img src="https://www.beautybebo.com/pub/media/mega-menu/lotus.jpg" alt="">
+    </div>
+    <div id="fifthbox1">
+        <div>
+            <img src="https://www.beautybebo.com/pub/media/catalog/category/makeup_1.png" alt="">
+            <p>Makeup</p>
+        </div>
+        <div>
+            <img src="https://www.beautybebo.com/pub/media/catalog/category/skin.png" alt="">
+            <p>Skin</p>
+        </div>
+        <div>
+            <img src="https://www.beautybebo.com/pub/media/catalog/category/hair.png" alt="">
+            <p>Hair</p>
+        </div>
+        <div>
+            <img src="https://www.beautybebo.com/pub/media/catalog/category/personal-care.png" alt="">
+            <p>Personal Care</p>
+        </div>
+        <div>
+            <img src="https://www.beautybebo.com/pub/media/catalog/category/mom-baby-care.png" alt="">
+            <p>Mom & Baby Care</p>
+        </div>
+        <div>
+            <img src="https://www.beautybebo.com/pub/media/catalog/category/eye_1.png" alt="">
+            <p>Eye</p>
+        </div>
+        <div>
+            <img src="https://www.beautybebo.com/pub/media/catalog/category/fragrance_3.png" alt="">
+            <p>Fragrance</p>
+        </div>
+    </div>
+    <div id="fifthbox2">
+        <div id="innerbox">
+            <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/2/7/277cf77missc00000081_1.jpg" alt="">
+            <p id="productname">Miss Claire Eyelash Glue - Clear Tone</p>
+            <div id="star">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+            <p ><strike id="strikeprice">₹449.00</strike> <span id="discountedprice">₹395.00</span><span id="discount">10% off</span></p>
+            <div id="addcart">
+                <button><i class="fa-solid fa-bag-shopping"></i>Add to Cart</button>
+                <button><i class="fa-solid fa-heart"></i></button>
+            </div>
+        </div>
+        <div id="innerbox">
+            <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/8/8/88b239c8904311904281__1_.jpg" alt="">
+            <p id="productname">WOW Skin Science Himalayan Rose Conditioner</p>
+            <div id="star">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+            <p ><strike id="strikeprice">₹449.00</strike> <span id="discountedprice">₹395.00</span><span id="discount">10% off</span></p>
+            <div id="addcart">
+                <button><i class="fa-solid fa-bag-shopping"></i>Add to Cart</button>
+                <button><i class="fa-solid fa-heart"></i></button>
+            </div>
+        </div>
+        <div id="innerbox">
+            <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/8/8/88b239c8904311904281__1_.jpg" alt="">
+            <p id="productname">WOW Skin Science Himalayan Rose Conditioner</p>
+            <div id="star">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+            <p ><strike id="strikeprice">₹449.00</strike> <span id="discountedprice">₹395.00</span><span id="discount">10% off</span></p>
+            <div id="addcart">
+                <button><i class="fa-solid fa-bag-shopping"></i>Add to Cart</button>
+                <button><i class="fa-solid fa-heart"></i></button>
+            </div>
+        </div>
+        <div id="innerbox">
+            <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/8/8/88b239c8904311904281__1_.jpg" alt="">
+            <p id="productname">WOW Skin Science Himalayan Rose Conditioner</p>
+            <div id="star">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+            <p ><strike id="strikeprice">₹449.00</strike> <span id="discountedprice">₹395.00</span><span id="discount">10% off</span></p>
+            <div id="addcart">
+                <button><i class="fa-solid fa-bag-shopping"></i>Add to Cart</button>
+                <button><i class="fa-solid fa-heart"></i></button>
+            </div>
+        </div>
+    </div>
+    <div id="sixthbox">
+        <div id="sixthboxinnerbox">
+            <h4>BEST SELLER</h4>
+            <div>
+                <div id="sixthboxinnerboximg">
+                    <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/p/o/ponds_super_light_gel_oil_free_moisturiser_with_hyaluronic_acid_vitamin_e2.jpg" alt="">
+                </div>
+                <div id="sixthboxinnerboxdata">
+                    <p>Ponds Super Light Gel Oil Free Moisturiser With Hyaluronic Acid + Vitamin E</p>
+                    <div id="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p ><strike id="strikeprice">₹449.00</strike> <span id="discountedprice">₹395.00</span><span id="discount">10% off</span></p>
+                    <div id="addcart">
+                        <button><i class="fa-solid fa-bag-shopping"></i>Add to Cart</button>
+                        <button><i class="fa-solid fa-heart"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div id="sixthboxinnerboximg">
+                    <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/c/l/cl-08_strawberry_love-min_2.png" alt="">
+                </div>
+                <div id="sixthboxinnerboxdata">
+                    <p>Ponds Super Light Gel Oil Free Moisturiser With Hyaluronic Acid + Vitamin E</p>
+                    <div id="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p ><strike id="strikeprice">₹449.00</strike> <span id="discountedprice">₹395.00</span><span id="discount">10% off</span></p>
+                    <div id="addcart">
+                        <button><i class="fa-solid fa-bag-shopping"></i>Add to Cart</button>
+                        <button><i class="fa-solid fa-heart"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div id="sixthboxinnerboximg">
+                    <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/d/s/dsfsdafsdfsd.jpg" alt="">
+                </div>
+                <div id="sixthboxinnerboxdata">
+                    <p>Ponds Super Light Gel Oil Free Moisturiser With Hyaluronic Acid + Vitamin E</p>
+                    <div id="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p ><strike id="strikeprice">₹449.00</strike> <span id="discountedprice">₹395.00</span><span id="discount">10% off</span></p>
+                    <div id="addcart">
+                        <button><i class="fa-solid fa-bag-shopping"></i>Add to Cart</button>
+                        <button><i class="fa-solid fa-heart"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="sixthboxinnerbox">
+            <h4>LATEST PRODUCTS</h4>
+            <div>
+                <div id="sixthboxinnerboximg">
+                    <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/r/e/repair_shampoo_650-2_1_1.jpg" alt="">
+                </div>
+                <div id="sixthboxinnerboxdata">
+                    <p>Ponds Super Light Gel Oil Free Moisturiser With Hyaluronic Acid + Vitamin E</p>
+                    <div id="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p ><strike id="strikeprice">₹449.00</strike> <span id="discountedprice">₹395.00</span><span id="discount">10% off</span></p>
+                    <div id="addcart">
+                        <button><i class="fa-solid fa-bag-shopping"></i>Add to Cart</button>
+                        <button><i class="fa-solid fa-heart"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div id="sixthboxinnerboximg">
+                    <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/8/9/8908003416557_1.png" alt="">
+                </div>
+                <div id="sixthboxinnerboxdata">
+                    <p>Ponds Super Light Gel Oil Free Moisturiser With Hyaluronic Acid + Vitamin E</p>
+                    <div id="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p ><strike id="strikeprice">₹449.00</strike> <span id="discountedprice">₹395.00</span><span id="discount">10% off</span></p>
+                    <div id="addcart">
+                        <button><i class="fa-solid fa-bag-shopping"></i>Add to Cart</button>
+                        <button><i class="fa-solid fa-heart"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div id="sixthboxinnerboximg">
+                    <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/i/m/image1_600x.jpg" alt="">
+                </div>
+                <div id="sixthboxinnerboxdata">
+                    <p>Ponds Super Light Gel Oil Free Moisturiser With Hyaluronic Acid + Vitamin E</p>
+                    <div id="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p ><strike id="strikeprice">₹449.00</strike> <span id="discountedprice">₹395.00</span><span id="discount">10% off</span></p>
+                    <div id="addcart">
+                        <button><i class="fa-solid fa-bag-shopping"></i>Add to Cart</button>
+                        <button><i class="fa-solid fa-heart"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="sixthboxinnerbox">
+            <h4>MOST VIEWED</h4>
+            <div>
+                <div id="sixthboxinnerboximg">
+                    <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/o/5/o5_1_1.jpg" alt="">
+                </div>
+                <div id="sixthboxinnerboxdata">
+                    <p>Ponds Super Light Gel Oil Free Moisturiser With Hyaluronic Acid + Vitamin E</p>
+                    <div id="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p ><strike id="strikeprice">₹449.00</strike> <span id="discountedprice">₹395.00</span><span id="discount">10% off</span></p>
+                    <div id="addcart">
+                        <button><i class="fa-solid fa-bag-shopping"></i>Add to Cart</button>
+                        <button><i class="fa-solid fa-heart"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div id="sixthboxinnerboximg">
+                    <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/x/z/xzxzxzxzxz.jpeg" alt="">
+                </div>
+                <div id="sixthboxinnerboxdata">
+                    <p>Ponds Super Light Gel Oil Free Moisturiser With Hyaluronic Acid + Vitamin E</p>
+                    <div id="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p ><strike id="strikeprice">₹449.00</strike> <span id="discountedprice">₹395.00</span><span id="discount">10% off</span></p>
+                    <div id="addcart">
+                        <button><i class="fa-solid fa-bag-shopping"></i>Add to Cart</button>
+                        <button><i class="fa-solid fa-heart"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div id="sixthboxinnerboximg">
+                    <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/g/v/gvhjgvyjhv.jpg" alt="">
+                </div>
+                <div id="sixthboxinnerboxdata">
+                    <p>Ponds Super Light Gel Oil Free Moisturiser With Hyaluronic Acid + Vitamin E</p>
+                    <div id="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p ><strike id="strikeprice">₹449.00</strike> <span id="discountedprice">₹395.00</span><span id="discount">10% off</span></p>
+                    <div id="addcart">
+                        <button><i class="fa-solid fa-bag-shopping"></i>Add to Cart</button>
+                        <button><i class="fa-solid fa-heart"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="seventhbox">
+        <img src="https://www.beautybebo.com/pub/media/mega-menu/offer.gif" alt="">
+    </div>
+    <div id="eighthbox">
+        <p>Welcome to Beauty Products Online Shopping India- Beauty Bebo</p>
+    </div>
+    <div id="ninthbox">
+        <p>If you are looking for a flawless radiant face outlook for a special occasion, then we have the perfect tips for you. As you must already know, the conspicuous flawless outlook you want for your wedding, a date, a dinner party or for a modelling competition is only achieved through makeup.</p>
+        <p>Don’t get me wrong, you are naturally beautiful, that’s obvious. But everyone else is, so how will you will you ensure that you are different? Read on for hot irresistible tips before you <span id="bold"> buy beauty products online!</span> </p> 
+        <p><span id="bold">Clean Your Face First!</span> </p>
+        <p>Before embarking on any makeup, always ensure that your face is clean. Need some assistance in absolute cleaning? Visit our range of face wash <span id="bold">beauty products online</span>  for your best pick. We have made it our duty to carefully select the best products for you, so that you don’t experience breaks and allergies after use. So now you can be confident that your <span id="bold">buy cosmetic online shopping</span>  will be worth your time and effort.</p>
+        <p>Wondering then how you will make a choice among the spectrum available? Most of our products are purely natural in ingredient, so you can as well check for your favorite ingredient combination. If not sure, we are still here for you. We can help narrow down your options, together with you.</p>
+        <p><span id="bold">Apply a Moisturizer</span></p>
+        <p>Next, you need a moisturizer in your <span id="link">makeup kit</span> . Moisturizers keep your face glowing regardless of the mood of the day. Most essentially, moisturizers will keep your skin hydrated from the outside, while your constant hydration by taking fluids enhance the efforts.</p>
+        <p>Our moisturizers range from matte, ponds, creams and gels, all to ensure that your specific need is met. Just go through the list for a better selection, which will aid you through your <span id="bold">cosmetic online shopping</span> . With the best moisturizer, it will also work as a primer. Hence, you don’t have to buy an extra product, which saves you some cost.</p>
+        <p><span>Get Your Makeup Kit</span></p>
+        <p>Your general makeup will consist, of more than the moisturizer. Some o the other major components include the foundation, which you use on your whole face. Then there is the concealer, which you concentrate on areas of the face you want to hide. There is the brightener and highlighter, which you will highlight areas you want conspicuous on your face.</p>
+        <p>And don’t forget to look into our range of toners for your best shot at a firmer face and neck.</p>
+        <p>We have the most effective <span id="link">beauty products India</span>  has dreamt of to replenish your kit, so don’t miss out!</p>
+        <p><span id="bold">Enhance the Outlook of the Eyes</span></p>
+        <p> At this point, your eyebrows should be in the shape and size you want them to be. Now you can brush them up to bring out a perfect outlook. Apply eye pencil to cover any gaps within the eyebrows for an ideal outlook.</p>
+        <p>f the area surrounding your eyes has a different color shade, probably more tanned or lighter in color in comparison to your general face color, then pay attention to the area.</p>
+        <p>Use concealers to bring out the perfect shade you want for a uniform outlook. Alternatively, you can use the highlighter to bring attention to your eyes, which even adds to a seemingly large-eye size.</p>
+        <p>If your eyes are starting to show wrinkles, then our under-eye wrinkle creams from our <span id="bold">cosmetic online shop</span> should come in handy.</p>
+        <p>Want to finish up with a luminating cosmetic product for a conspicuously radiant look? Go ahead and make your <span id="link">makeup</span> experience more appealing.</p>
+        <p><span id="bold">Your Lips?</span></p>
+        <p>For a natural beauty look, go for a glossy lip gloss or a light lipstick. Or are you going out with the girls, and thicker lips your way? Our range of matte lipstick collection should work for you.</p>
+        <p>Bottom Line</p>
+        <p>Want to <span id="link">buy beauty products online</span> to improve your makeup kit? We are always there for you, ready to help.</p>
+        <p>All you have to do is take a step, look into our products and try us. Looking forward to seeing you!</p>
+    </div>
+</body>
+</html>
+
+        
