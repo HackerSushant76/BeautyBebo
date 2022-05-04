@@ -1,0 +1,68 @@
+body{
+    display: flex;
+    justify-content: right;
+}
+#container{
+    border : 1px solid red;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto;
+    width: 70%;
+    box-sizing: border-box;
+}
+#container>div{
+    border: 1px solid green;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+}
+#container img{
+    width: 100%;
+}
+#logo{
+    background-color: #DD0285;
+    padding: 15px 10px 15px 10px;
+    border-radius: 70%;
+    position: relative;
+    left: 80%;  
+    bottom: 55%;
+    color: white;
+}
+#container>div>div{
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid brown; */
+    margin: auto;
+    margin-top: -20px;
+}
+strike{
+    margin-top: 20px;
+    color: rgb(63, 63, 63);
+    font-weight: 500;
+}
+strike+p{
+    font-weight: bolder;
+    font-size: 20px;
+    color: rgb(2, 73, 2);
+}
+p+p{
+    font-weight: 900px;
+    margin-top: 20px;
+}
+
+#cart{
+    display: block;
+    margin: auto;
+    background-color: #DD0285;
+    border: 0px;
+    padding: 5px 15px 5px 20px;
+    color: white;
+    margin-top: 20px;
+}
+#wish{
+    margin-top: 20px;
+    background-color: black;
+    color: white;
+    
+}

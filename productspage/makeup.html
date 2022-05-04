@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MakeUp</title>
+    <link rel="stylesheet" href="makeup.css">
+</head>
+<body>
+    <div id="container"></div>
+</body>
+</html>
+<script>
+    makeupdata= [
+        {
+            imgurl: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/2/7/277cf77missc00000081_1.jpg",
+            name: "Miss Claire Eyelash Glue - Clear Tone",
+            price: "₹322.00",
+            strikedoffprice: "₹350.00",
+            disc: "8% off"
+        },
+        {
+            imgurl: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/5/b/5b990e16902395773146_3.jpg",
+            name: "Maybelline New York Fit Me Primer - Dewy+Smooth",
+            price: "₹475.00",
+            strikedoffprice: "₹499.00",
+            disc: "5% off"
+        },
+        {
+            imgurl: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/6/9/6902395735908_0.jpg",
+            name: "L'Oreal Paris Infallible Full Wear Concealer",
+            price: "₹735.00",
+            strikedoffprice: "₹799.00",
+            disc: "8% off"
+        },
+        {
+            imgurl: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/5/1/51c18ra5qzs._sl1500_.jpg",
+            name: "Faces Canada Ultime Pro Matte Play Eyeliner",
+            price: "₹604.00 ",
+            strikedoffprice: "₹649.00",
+            disc: "7% off"
+        },
+        {
+            imgurl: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/b/c/bcf6c6c8904052434726__2_.jpg",
+            name: "Colorbar Intensify Liquid Gel Eyeliner - Arabian Nights",
+            price: "₹699.00",
+            strikedoffprice: "₹750.00",
+            disc: "8% off"
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/6/1/618a4rcg7il._sl1500_.jpg",
+            name:"Nyx Professional Makeup Pore Filler",
+            price:"₹1,378.00",
+            strikedoffprice:"₹1,450.00",
+            disc: "5% off"
+        },
+        {
+            imgurl:"",
+            name:"",
+            price: "",
+            strikedoffprice: "",
+            disc: ""
+        }
+    ]
+
+    displayData(makeupdata);
+
+    function displayData(data){
+
+        makeupdata.forEach(function(elem) {
+            
+            var box= document.createElement('div')
+
+            var img= document.createElement('img')
+            img.setAttribute("src", elem.imgurl)
+
+            var sale= document.createElement('span')
+            sale.innerText= "Sale"
+            sale.setAttribute("id","logo")
+
+            var name= document.createElement('p')
+            name.innerText= elem.name
+
+            var smallbox= document.createElement('div')
+
+                var strike = document.createElement('strike')
+                strike.innerText= elem.strikedoffprice
+
+                var price= document.createElement('p')
+                price.innerText= elem.price
+
+                var disc= document.createElement('p')
+                disc.innerText= elem.disc
+            var smallbox2 = document.createElement('div')
+                var wish= document.createElement('button')
+                wish.innerText= "♡"
+                wish.setAttribute('id','wish')
+
+                var cart= document.createElement('button')
+                cart.innerText = "🛒 Add to Cart"
+                cart.setAttribute("id","cart")
+
+            smallbox.append(strike,price,disc)
+            smallbox2.append(cart,wish)
+            box.append(img,sale,name,smallbox,smallbox2)
+            document.querySelector('#container').append(box)
+        });
+    }
+</script>
