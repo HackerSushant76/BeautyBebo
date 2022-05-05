@@ -5,158 +5,81 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="homepage.css">
+    <script src="https://kit.fontawesome.com/6d49b9dc2e.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,100&display=swap" rel="stylesheet">
-    <style>
-        #firstbox{
-            width: 85%;height: 400px;border: 1px solid black;margin: auto;display: flex;
-        }
-        #homecategory{
-            width: 25%;height: 100%;border: 2px solid blue;padding-left: 20px;
-        }
-        #homecategory>p{
-            margin-left: ;
-        }
-        #homeslidingimg{
-            width: 75%;height: 100%;
-        }
-        #homeslidingimg>img{
-            height: 90%;width:100%;
-        }
-        #secondbox{
-            width: 85%;margin: auto;margin-top: 10px;border: 1px solid blue;
-        }
-        #secondbox>img{
-            width: 100%;height: auto;
-        }
-        #secondbox>h3{
-            font-weight: 100;margin-bottom: 0px;
-        }
-        #thirdbox{
-            border: 0px solid red;height: auto;margin: auto;
-            width: 85%;display: flex;
-            box-sizing: border-box;overflow: scroll;
-            /* display: grid;grid-template-columns: repeat(4,1fr);grid-template-rows: 1 auto; */
-            
-        }
-        #innerbox{
-            box-sizing: border-box;padding: 20px 20px 0px 20px;border: 1px solid grey;height: auto;
-            width: 25%;
-        }
-        #innerbox>img,#innerbox>p,#innerbox>div{
-            margin: auto;text-align: center;
-        }
-        #innerbox>img{
-            height: 60%;display: block;align-items: center;
-        }
-        #productname{
-            color: rgb(16, 16, 16)
-        }
-        #star+p{
-            margin-bottom: 10px;margin-top: 10px;
-        }
-        .fa-star{
-            font-size: 10px; color: grey;
-        }
-        #strikeprice{
-            color: grey;font-weight: lighter;margin-right: 5px;
-        }
-        #discountedprice{
-            font-weight: bold;color: #dd0285;margin-right: 5px;
-        }
-        #discount{
-            color: green;font-weight: bold;
-        }
-        #addcart{
-            margin: auto;border: 0px solid blue;
-        }
-        .fa-bag-shopping{
-            margin-right: 7px;
-        }
-        #addcart>button:nth-child(1){
-            padding: 5px 20px;border-radius: 2px;border: 0px;background-color:#dd0285;color: white;
-        }
-        #addcart>button:nth-child(2){
-            padding: 5px 10px;border-radius: 2px;border: 0px;background-color:gray;color: white;
-        }
-        #fourthbox{
-            display: grid;grid-template-columns: repeat(2,1fr);width: 85%;grid-template-rows: 1 auto;margin: auto;gap: 0px 30px;
-            margin-top: 20px;            
-        }
-        #fourthbox>img{
-            width: 100%;box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-        }
-        #fifthbox1{
-            width: 85%;height: auto;border: 1px solid salmon;margin: auto;margin-top: 20px;
-            border: 0px solid grey;display: grid;grid-template-columns: repeat(7,1fr);
-        }
-        #fifthbox1>div{
-            border: 1px solid grey;
-        }
-        #fifthbox1>div:hover{
-            background-color: #dd0285;color: white;
-        }
-        #fifthbox1>div>img{
-            height: 40%;display: block;margin: auto;margin-top: 10px;
-        }
-        #fifthbox1>div>img:hover{
-            color: white;
-        }
-        #fifthbox1>div>p{
-            text-align: center;margin-top: 5px;margin-bottom: 0px;
-        }
-        #fifthbox2{
-            width: 85%;margin: auto;border: 1px solid saddlebrown;display: flex;
-        }
-        #sixthbox{
-            display: grid;grid-template-columns: repeat(3,1fr);grid-template-rows: 1 auto;gap: 30px;border: 0px solid red;
-            width: 85%;margin: auto;margin-top: 10px;
-        }
-        #sixthboxinnerbox{
-            border: 0px solid gray;
-        }
-        #sixthboxinnerbox>h4{
-            font-weight: 100;font-family: sans-serif;margin-bottom: 5px;
-        }
-        #sixthboxinnerbox>div{
-            border: 1px solid gray;height: auto;width: 100%;display: flex;padding: 15px 0px;
-        }
-        #sixthboxinnerboximg{
-            width: 35%;height: 100%;
-        }
-        #sixthboxinnerboximg>img{
-            width: 100%;height: auto;
-        }
-        #sixthboxinnerboxdata{
-            width: 60%;height: 100%;
-        }
-        #seventhbox{
-            width: 85%;margin: auto;margin-top: 30px;
-        }
-        #seventhbox>img{
-            width: 100%;
-        }
-        #eighthbox{
-            width: 85%;margin: auto;font-size: 26px;color: grey;font-weight: 500;font-family: sans-serif;
-        }
-        #ninthbox{
-            width: 85%;margin: auto;box-sizing: border-box;
-        }
-        #ninthbox>p{
-            font-size: 14px;font-family: 'Roboto', sans-serif;
-        }
-        #ninthbox>p>#link{
-            font-weight: bold;
-        }
-        #ninthbox>p>#bold{
-            font-weight: 550;
-        }
-    </style>
 </head>
 <body>
+    <!-- // Navigation bar Start-->
+    <div id="header">
+        <img src="https://www.beautybebo.com/pub/media/ads/ad-desktop.jpg" alt="header_image">
+    </div>
+    <div id="searchbar">
+        <img src="https://www.beautybebo.com/pub/media/logo/default/beautybebo_1.png" alt="beautybeboLogo">
+        <div id="category">
+            <select name="category" id="category2" >
+                <option value="All Catagories">All Categories</option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+            </select>
+            <span>|</span>
+            <input type="text" placeholder="Enter your seacrh..." id="search">
+            <div id="fa1">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+        </div>
+        <div id="category3">
+            <div id="fa2">
+                <i class="fa-solid fa-heart"></i>
+            </div>
+            <div id="fa3">             
+                <i class="fa-solid fa-user-large"></i>
+            </div> 
+            <p>My Account</p>
+        </div>
+        
+    </div>
+    <div id="thirddiv">
+        <div id="thirddiv1">
+            <div id="categoryselector">
+                <select name="" id="">
+                    <option value="none">MAKEUP</option>
+                </select>
+                <select name="skin" id="">
+                    <option value="skin">SKIN</option>
+                </select>            
+                <select name="hair" id="">
+                    <option value="makeup">HAIR</option>
+                </select>
+                <select name="personalCare" id="">
+                    <option value="makeup">PERSONAL CARE</option>
+                </select>
+                <select name="Mom&babyCare" id="">
+                    <option value="makeup">MOM & BABY CARE</option>
+                </select>
+                <select name="fragrance" id="">
+                    <option value="makeup">FRAGRANCE</option>
+                </select>
+                <select name="ayurveda" id="">
+                    <option value="makeup">AYURVAEDA</option>
+                </select>
+                <select name="brands" id="">
+                    <option value="makeup">BRANDS</option>
+                </select>
+            </div>
+            <div id="mycart">
+                <i class="fa-solid fa-bag-shopping"></i>
+                MY CART
+            </div>
+        </div>
+            
+    </div>
+    <!-- // Navigation bar end-->
+
+    <!-- Homepage start -->
+
     <div id="firstbox">
         <div id="homecategory">
             <h3>ALL CATEGORIES</h3>
@@ -169,14 +92,25 @@
             <p><img src="https://www.beautybebo.com/pub/media/ayurveda.png" alt=""> Ayurveda</p>
         </div>
         <div id="homeslidingimg">
-            <img src="https://www.beautybebo.com/pub/media/mega-menu/slider-2.jpg" alt="">
+            <img src="http://127.0.0.1:5500/BeautyBebo/homepage/Image/slider-1.jpg"id="slideimage1">
+            <div id="one">
+
+            </div>
+            <div id="two">
+
+            </div>
+            <div id="three">
+
+            </div>
         </div>
     </div>
     <div id="secondbox">
-        <img src="https://www.beautybebo.com/pub/media/blue_heaven.jpg" alt="">
-        <h3 id="nwar">NEW ARRIVALS!</h3>
+        <img src="https://www.beautybebo.com/pub/media/blue_heaven.jpg" alt="">     
     </div>
-    <div id="thirdbox">
+    <div id="thirdbox1">
+        <h3>NEW ARRIVALS!</h3>
+    </div>
+    <div id="thirdbox2">
         <div id="innerbox">
             <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/8/8/88b239c8904311904281__1_.jpg" alt="">
             <p id="productname">WOW Skin Science Himalayan Rose Conditioner</p>
@@ -628,7 +562,11 @@
         <p>Want to <span id="link">buy beauty products online</span> to improve your makeup kit? We are always there for you, ready to help.</p>
         <p>All you have to do is take a step, look into our products and try us. Looking forward to seeing you!</p>
     </div>
+    
+    <!-- Homepage end -->
+
 </body>
 </html>
 
+<script src="homepage.js"></script>
         

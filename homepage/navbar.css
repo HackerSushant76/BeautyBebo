@@ -1,0 +1,65 @@
+
+*{
+    margin: 0px;padding: 0px;
+}
+#header{
+    background-image: url("https://www.beautybebo.com/pub/media/ads/ad-desktop.jpg");
+    height:auto;width:auto;
+    background-size: contain;background-repeat: no-repeat;
+}
+#searchbar{
+    height: 70px;width: 90%;padding: 15px 50px;display: flex;border: 0px solid saddlebrown;
+    align-items: center;justify-content: space-evenly;
+}
+#category{
+    border: 1px solid grey;margin-left: 0px;display: flex;align-items: center;
+    border-radius: 5px;width: auto;
+}
+#category2{
+    width: 220px;height: 40px;padding: 20px;margin-right: 20px;border: 0px;
+}
+#search{
+    width: 250px;height: auto;margin-left: 20px;border: 0px;
+}
+#category3{
+    display: flex;gap: 15px;align-items: center;
+}
+#fa1{
+    padding: 7px;background-color: #dd0285;border: 0px;width: auto;
+}
+.fa-magnifying-glass{
+    padding: 6px 14px;color: white;
+}
+#fa2{
+    padding: 12px;border: 1px solid black;
+}
+#fa3{
+    padding: 12px;
+}
+#thirddiv{
+    width: 100%;height: 50px;background-color: #dd0285;
+    position: sticky;top: 0px;
+}
+#thirddiv1{
+    width: 85%;height: 100%;border: 0px solid black;display: flex;justify-content: space-between;align-items: center;margin: auto;
+}
+#categoryselector{
+    width: 70%;border: 0px solid green;height: 100%;display: grid;grid-template-columns: repeat(8,1fr);
+}
+#categoryselector>select{
+    display: flex;justify-content: center;align-items: center;background-color: #dd0285;padding: 0px 13px;color: white;font-weight: bold;
+    font-size: 14px;border: 0px;
+}
+#categoryselector>select:hover{
+    background-color: #972d6d;
+}
+#mycart{
+    width: 15%;border: 0px solid red;height: 100%;color: white;font-weight: bold;border: 0px;font-size: 14px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+#mycart:hover{
+    background-color: #972d6d;
+}
+.fa-bag-shopping{
+    color: white;padding: 15px;margin-left: 10px;
+}
