@@ -54,8 +54,12 @@
     background-color: #972d6d;
 }
 #mycart{
-    width: 15%;border: 0px solid red;height: 100%;color: white;font-weight: bold;border: 0px;font-size: 14px;
+    width: 15%;height: 100%;color: white;font-weight: bold;border: 0px;font-size: 14px;background-color: #dd0285;
+    display: flex;align-items: center;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+#mycart>a{
+    color: white;font-weight: bold;border: 0px;font-size: 14px;text-decoration: none;
 }
 #mycart:hover{
     background-color: #972d6d;
