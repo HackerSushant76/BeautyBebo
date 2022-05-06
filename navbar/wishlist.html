@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #main{
+            width: 80%;
+            margin: auto;
+            /* border: 1px solid black; */
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+        #side{
+            width: 30%;
+            height: 950px;
+            /* border: 1px solid green; */
+            margin-top: -30px;
+        }
+        #container{
+         width: 70%;
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-around;
+         /* border: 1px solid red; */
+         float: right;
+        
+        }
+        #container>div{
+          width: 32%;
+          height: 700px;
+          margin-top: 20px;
+          /* border: 1px solid black; */
+          box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+        }
+        #container>div>img{
+            width: 100%;
+            height: 60%;
+        }
+        #namebox{
+            width: 100%;
+            height: 30px;
+        }
+        #namebox>p{
+            display: block;
+            text-align: center;
+            font-size: 14px;
+            font-family:Arial, Helvetica, sans-serif;
+            
+        }
+        /* #pricebox{
+            width: 50%;
+            display: flex;
+            border: 1px solid red;
+            margin: auto;
+            
+        }
+        #pricebox>p{
+          color: #dd0285;
+          
+          text-align: center;
+        }
+        strike{
+            color: grey;
+        } */
+ #pricebox{
+         width: 200px;
+         height: 50px;
+         display: flex;
+         justify-content: space-evenly;
+         /* border: 1px solid brown; */
+         /* margin: auto; */
+         margin-top: 20px;
+         
+    /* margin-bottom: 70px; */
+        }
+ strike{
+    /* margin-top: 23px; */
+    color: rgb(131, 126, 126);
+    font-weight: 600;
+  }
+strike+p{
+    font-weight: bolder;
+    font-size: 20px;
+    color: #DD0285;
+   
+   }
+   textarea{
+      width: 90%;
+      /* padding: 20px; */
+      display: block;
+      margin: auto;
+      margin-top: 5px;
+      
+   }
+   #inbox{
+       display: flex;
+       width: 52%;
+       /* border: 1px solid red; */
+       margin: auto;
+       margin-top: 5px;
+       justify-content: space-between;
+   }
+   input{
+       width: 40px;
+       height: 40px;
+   }
+   #inbox>button{
+       width: 140px;
+       height: 45px;
+       background: #444444;
+       margin-left: 5px;
+       border: none;
+       color: white;
+    }
+    #inbox>button:hover{
+        background-color: #DD0285;
+        cursor: pointer;
+    }
+    #btn{
+        width: 80px;
+        height: 30px;
+        display: block;
+        margin: auto;
+        margin-top: 20px;
+        border: none;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border-radius: 10px;
+    }
+    #btn:hover{
+        background: red;
+    }
+    h1{
+        display: block;
+        font-size: 20px;
+        margin-left: 520px;
+        font-family:Arial, Helvetica, sans-serif;
+    }
+    h3{
+        font-size: 16px;
+        padding: 10px;
+    }
+    h3+img{
+        width: 100%;
+        margin-top: 50px;
+    }
+    a{
+        text-decoration: none;
+        color: grey;
+        font-family:Arial, Helvetica, sans-serif;
+    }
+    a:hover{
+        color: black;
+    }
+    </style>
+</head>
+<body>
+    <h1>MY WISH LIST</h1>
+    <div id="main">
+       <!-- <h1>MY WISH LIST</h1> -->
+       <div id="side">
+          <h3><a href="#">My Account</a></h3>
+          <h3><a href="#"> My Orders</a></h3>
+          <h3><a href="#">My Wish list</a></h3>
+          <hr class="solid"> 
+          <h3><a href="#">Address Book</a></h3>
+          <h3><a href="#">Account Information</a></h3>
+          <hr class="solid"> 
+          <h3><a href="#">My Product Reviews</a></h3>
+          <h3><a href="#">Newsletter Subscriptions</a></h3>
+          <img src="https://www.beautybebo.com/pub/media/free-delivery.jpg" alt="">
+       </div>
+       
+       <div id="container">
+        
+        <!-- Append here -->
+       </div>
+    </div>
+
+ 
+</body>
+</html>
+
+<script>
+   var addtowishArr = JSON.parse(localStorage.getItem('wishlist')) || [];
+//    console.log(addtowishArr)
+    displayData(addtowishArr)
+
+    function displayData(data) {
+       data.forEach(function (elem) {
+         var box = document.createElement("div")
+         
+         var image = document.createElement("img");
+         image.setAttribute("src", elem.imgurl)
+
+         var namebox= document.createElement('div')
+            namebox.setAttribute('id',"namebox")
+
+            var name= document.createElement('p')
+            name.innerText= elem.name
+ 
+            var smallbox= document.createElement('div')
+            
+               smallbox.setAttribute('id',"pricebox")
+
+                var strike = document.createElement('strike')
+                strike.innerText= elem.strikedoffprice
+
+                var price= document.createElement('p')
+                price.innerText= elem.price
+         
+              var proinner = document.createElement("div");
+               proinner.setAttribute("id","proinner")
+
+            var coment = document.createElement("textarea")
+             coment.textContent =" Comment here.....";
+
+            var inbox = document.createElement("div")
+            inbox.setAttribute("id","inbox")
+            
+            var input = document.createElement("input")
+            input.textContent = "1";
+
+            var btn = document.createElement("button");
+            btn.textContent = "ADD TO CART";
+
+            var btn2 = document.createElement("button");
+            btn2.setAttribute("id","btn")
+            btn2.textContent = "Delete";
+            btn2.addEventListener("click", function (event) {
+            event.target.parentNode.remove();
+    })
+
+         
+         namebox.append(name)
+         inbox.append(input,btn)   
+         proinner.append(coment)
+         smallbox.append(strike,price)
+         box.append(image,namebox,smallbox,proinner,inbox,btn2)
+         container.append(box)
+       })
+
+   
+    }
+</script>

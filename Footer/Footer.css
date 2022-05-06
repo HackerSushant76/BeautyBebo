@@ -1,0 +1,86 @@
+#footer{
+    position: fixed;
+    bottom: 0;
+    height: 800px;
+    width: 100%;
+    background-color: rgb(46, 42, 42);
+
+}
+#container{
+  
+   
+    height: 600px;
+    display: flex;
+    justify-content: space-around;
+  
+
+}
+
+#container>div>h2{
+    color: white;
+
+}
+p{
+    color: red;
+}
+h3{
+    font-size: 30px;
+    color:rgb(126, 121, 121);
+
+}
+li{
+    font-size: 40px;
+    
+    color:rgb(126, 121, 121);
+}
+hr{
+    width: 90%;
+    margin: 0 5% 20px 5%  ;
+}
+#base{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+}
+#base>div:nth-child(1){
+    display: flex;
+    justify-content: space-around;
+    width: 20%
+ 
+    
+}
+#base>div:nth-child(2){
+    display: flex;
+    justify-content: space-around;
+    width: 50%
+
+}
+h1{
+    color: white;
+    font-size: 40px;
+}
+img{
+    height: 80px;
+    width: 80px;
+    border-radius: 30%;
+}
+#email{
+    width:40% ;
+    font-size: 40px;
+}
+
+#subscribe{
+   background-color: rgb(221, 119, 136);
+   color: white;
+   width: 20%;
+   font-size: 40px;
+   
+}
+#subscribe:hover{
+    cursor: pointer;
+}
+
+
+
+
