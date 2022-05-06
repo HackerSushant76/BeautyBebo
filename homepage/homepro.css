@@ -1,0 +1,75 @@
+#thirdbox2{
+    /* border : 1px solid red; */
+    display: grid;
+    display: flex;
+    box-sizing: border-box;
+    overflow: scroll;
+    width: 85%;
+    box-sizing: border-box;
+    margin:auto ;
+}
+#thirdbox2>div{
+    border: 1px solid rgb(224, 224, 224);
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    box-sizing: border-box;
+    /* position: relative; */
+}
+#thirdbox2 img{
+    width: 100%;
+    display: block;
+    margin: auto;
+}
+.namebox{
+    height: 60px;
+    /* border: 1px solid teal; */
+    font-size: 14px;
+}
+.pricebox{
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid brown; */
+    margin: auto;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+strike{
+    /* margin-top: 23px; */
+    color: rgb(131, 126, 126);
+    font-weight: 600;
+}
+.pricebox>p:nth-child(2){
+    font-weight: bold;
+    /* margin-top: 23px; */
+    color: green;
+}
+.cartbox{
+    /* border: 1px solid purple; */
+    /* position: absolute; */
+    bottom: 10px;
+    display: flex;
+    width: 170px;
+    margin: auto;
+    height: 30px;
+}
+.cart{
+    display: block;
+    margin: auto;
+    background-color: #DD0285;
+    border: 0px solid grey;
+    border-radius: 4px;
+    padding: 5px 15px 5px 20px;
+    color: white;
+    height: 100%;
+}
+.wish{
+    background-color: rgb(77, 75, 75);
+    border: 0px;
+    border-radius: 4px;
+    color: white;
+    width: 28px;
+    height: 100%;
+} 

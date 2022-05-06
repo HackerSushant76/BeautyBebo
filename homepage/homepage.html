@@ -7,6 +7,8 @@
     <title>Homepage</title>
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="homepage.css">
+    <link rel="stylesheet" href="homepro.css">
+    <link rel="stylesheet" href="homepro1.css">
     <script src="https://kit.fontawesome.com/6d49b9dc2e.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,100&display=swap" rel="stylesheet">
 </head>
@@ -111,7 +113,7 @@
         <h3>NEW ARRIVALS!</h3>
     </div>
     <div id="thirdbox2">
-        <div id="innerbox">
+        <!-- <div id="innerbox">
             <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/8/8/88b239c8904311904281__1_.jpg" alt="">
             <p id="productname">WOW Skin Science Himalayan Rose Conditioner</p>
             <div id="star">
@@ -238,44 +240,44 @@
                 <button><i class="fa-solid fa-bag-shopping"></i>Add to Cart</button>
                 <button><i class="fa-solid fa-heart"></i></button>
             </div>
-        </div>
+        </div> -->
     </div>
     <div id="fourthbox">
         <img src="https://www.beautybebo.com/pub/media/mega-menu/beeone.jpg" alt="">
         <img src="https://www.beautybebo.com/pub/media/mega-menu/lotus.jpg" alt="">
     </div>
     <div id="fifthbox1">
-        <div>
+        <div id="btn1">
             <img src="https://www.beautybebo.com/pub/media/catalog/category/makeup_1.png" alt="">
             <p>Makeup</p>
         </div>
-        <div>
+        <div id="btn2">
             <img src="https://www.beautybebo.com/pub/media/catalog/category/skin.png" alt="">
             <p>Skin</p>
         </div>
-        <div>
+        <div id="btn3">
             <img src="https://www.beautybebo.com/pub/media/catalog/category/hair.png" alt="">
             <p>Hair</p>
         </div>
-        <div>
+        <div id="btn4"> 
             <img src="https://www.beautybebo.com/pub/media/catalog/category/personal-care.png" alt="">
             <p>Personal Care</p>
         </div>
-        <div>
+        <div id="btn5">
             <img src="https://www.beautybebo.com/pub/media/catalog/category/mom-baby-care.png" alt="">
             <p>Mom & Baby Care</p>
         </div>
-        <div>
+        <div id="btn6">
             <img src="https://www.beautybebo.com/pub/media/catalog/category/eye_1.png" alt="">
             <p>Eye</p>
         </div>
-        <div>
+        <div id="btn7">
             <img src="https://www.beautybebo.com/pub/media/catalog/category/fragrance_3.png" alt="">
             <p>Fragrance</p>
         </div>
     </div>
     <div id="fifthbox2">
-        <div id="innerbox">
+        <!-- <div id="innerbox">
             <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/2/7/277cf77missc00000081_1.jpg" alt="">
             <p id="productname">Miss Claire Eyelash Glue - Clear Tone</p>
             <div id="star">
@@ -338,7 +340,7 @@
                 <button><i class="fa-solid fa-bag-shopping"></i>Add to Cart</button>
                 <button><i class="fa-solid fa-heart"></i></button>
             </div>
-        </div>
+        </div> -->
     </div>
     <div id="sixthbox">
         <div id="sixthboxinnerbox">
@@ -569,4 +571,586 @@
 </html>
 
 <script src="homepage.js"></script>
+<script>
+    homeProDataArr= [
+    {
+            imgurl: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/r/e/repair_shampoo_650-2_1_1.jpg",
+            name: "Dove Intense Repair Shampoo 650ml(650ml)",
+            price: "₹350.00",
+            strikedoffprice: "₹500.00",
+            disc: "30% off",
+            rate: 350
+        },
+        {
+            imgurl: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/8/9/8908003416557_1.png",
+            name: "Organic Harvest Cleansing Milk With Essential Oils(100ml)",
+            price: "₹491.00",
+            strikedoffprice: "₹545.00",
+            disc: "10% off",
+            rate: 491
+        },
+        {
+            imgurl: "https://www.beautybebo.com/pub/media/catalog/product/cache/9afc37bdf46fae888adf23d57cf627ad/i/m/image1_600x.jpg",
+            name: "Lotus Herbals Whiteglow Vitamin C Radiance Cream Spf 20",
+            price: "₹428.00",
+            strikedoffprice: "₹475.00",
+            disc: "10% off"
+            ,rate: 428
+        },
+        {
+            imgurl: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/3/6/3699c478906105612174-2.jpg",
+            name: "WOW Skin Science Caffeine Face Serum",
+            price: "₹515.00",
+            strikedoffprice: "₹599.00",
+            disc: "14% off"
+            ,rate: 515
+        },
+        {
+            imgurl: "https://www.beautybebo.com/pub/media/catalog/product/cache/9afc37bdf46fae888adf23d57cf627ad/8/9/8904304651284_1.jpg",
+            name: "WOW Skin Science Activated Charcoal Face Scrub",
+            price: "₹375.00",
+            strikedoffprice: "",
+            disc: ""
+            ,rate: 575
+        },
+        {
+            imgurl: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/a/c/activated_charcoal_face_mask2.jpg",
+            name:"WOW Skin Science Activated Charcoal Face Mask",
+            price:"₹435.00",
+            strikedoffprice: "₹499.00",
+            disc:"13% off",
+            rate: 435
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/9afc37bdf46fae888adf23d57cf627ad/f/0/f0c4f25lotus00000014.jpg",
+            name: "Lotus Organics+ Bakuchiol Plant Retinol Miracle Facial Oil",
+            price: "₹896.00",
+            strikedoffprice: "₹995.00",
+            disc: "10% off",
+            rate: 896
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/9afc37bdf46fae888adf23d57cf627ad/5/3/53f7f568906080030383_rvn1.jpg",
+            name: "Organic Harvest Masseuscious Damage Control Cleanser With Acai Berry",
+            price: "₹1,420.00",
+            strikedoffprice: "₹1,495.00",
+            disc: "5% off",
+            rate: 1420
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/9afc37bdf46fae888adf23d57cf627ad/8/9/8904311901495_1_1_.jpg",
+            name: "WOW Skin Science AM2PM Sunscreen SPF 50 Lotion",
+            price: "₹385.00",
+            strikedoffprice: "",
+            disc: "",
+            rate: 385
+        }
+        ,
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/9afc37bdf46fae888adf23d57cf627ad/e/f/efbafe2nywow000083__1_.jpg",
+            name: "WOW Skin Science 10 In 1 Miracle Hair Oil",
+            price: "₹515.00",
+            strikedoffprice: "₹599.00",
+            disc: "14% off",
+            rate: 385
+        }
+
+    ]
+
+        displayData(homeProDataArr)
+        var addcartArr=JSON.parse(localStorage.getItem('makeuplist')) || []
+        var addtowishArr= JSON.parse(localStorage.getItem('wishlist')) || []
+       
+        function displayData(data){
+        // document.querySelector('#container').innerText= "";
+
+        data.forEach(function(elem) {
+
+            var box= document.createElement('div')
+
+            var img= document.createElement('img')
+            img.setAttribute("src", elem.imgurl)
+
+            // var sale= document.createElement('span')
+            // sale.innerText= "Sale"
+            // sale.setAttribute("class","logo")
+
+            var namebox= document.createElement('div')
+            namebox.setAttribute('class',"namebox")
+
+            var name= document.createElement('p')
+            name.innerText= elem.name
+
+            var smallbox= document.createElement('div')
+
+            smallbox.setAttribute('class',"pricebox")
+
+                var price= document.createElement('p')
+                price.innerText= elem.price
+
+                var strike = document.createElement('strike')
+                strike.innerText= elem.strikedoffprice
+
+                var disc= document.createElement('p')
+                disc.innerText= elem.disc
+
+            var smallbox2 = document.createElement('div')
+            smallbox2.setAttribute("class","cartbox")
+
+                var wish= document.createElement('button')
+                wish.innerHTML= `<i class="fa-solid fa-heart"></i>`
+                wish.setAttribute('class','wish')
+                wish.addEventListener('click',function(){
+                    addtowishfunc(elem);
+                })
+
+                var cart= document.createElement('button')
+                cart.innerText = "🛒 Add to Cart"
+                cart.setAttribute("class","cart")
+                cart.addEventListener('click',function(){
+                    addcartfunc(elem)
+                })
+
+            namebox.append(name)
+            smallbox.append(strike,price,disc)
+            smallbox2.append(cart,wish)
+            box.append(img,namebox,smallbox,smallbox2)
+            document.querySelector('#thirdbox2').append(box)
+        });
+    }
+   
+    function addcartfunc(elem){
+        var exist = addcartArr.filter(function(el){
+            return elem.name == el.name
+        })
+        if(exist.length>0){
+            alert('Added already')
+        }
+        else{
+            alert('Added to cart')
+             addcartArr.push(elem)
+            localStorage.setItem('makeuplist',JSON.stringify(addcartArr))
+            // console.log(addcartArr)
+        }
+    }
+    function addtowishfunc(elem){
+        var exist = addtowishArr.filter(function(el){
+            return elem.name == el.name
+        })
+        if(exist.length>0){
+            alert('Added already')
+        }
+        else{
+            alert('Added to Wishlist')
+            addtowishArr.push(elem)
+            localStorage.setItem('wishlist',JSON.stringify(addtowishArr))
+            console.log(addtowishArr)
+        }
+    }
+</script>
+<script>
+     homeProDataArr1= [
+        {
+            imgurl: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/5/b/5b990e16902395773146_3.jpg",
+            name: "Maybelline New York Fit Me Primer - Dewy+Smooth",
+            price: "₹475.00",
+            strikedoffprice: "₹499.00",
+            disc: "5% off",
+            rate: 475,
+            catagory:"makeup" 
+        },
+        {
+            imgurl: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/6/9/6902395735908_0.jpg",
+            name: "L'Oreal Paris Infallible Full Wear Concealer",
+            price: "₹735.00",
+            strikedoffprice: "₹799.00",
+            disc: "8% off"
+            ,rate: 735
+            ,catagory:"makeup"
+        },
+        {
+            imgurl: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/5/1/51c18ra5qzs._sl1500_.jpg",
+            name: "Faces Canada Ultime Pro Matte Play Eyeliner",
+            price: "₹604.00 ",
+            strikedoffprice: "₹649.00",
+            disc: "7% off"
+            ,rate: 604
+            ,catagory:"makeup"
+        },
+        {
+            imgurl: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/b/c/bcf6c6c8904052434726__2_.jpg",
+            name: "Colorbar Intensify Liquid Gel Eyeliner - Arabian Nights",
+            price: "₹699.00",
+            strikedoffprice: "₹750.00",
+            disc: "8% off",
+            rate: 699
+            ,catagory:"makeup"
+        }
+        ,
+        {
+            imgurl: "https://www.beautybebo.com/pub/media/catalog/product/cache/9afc37bdf46fae888adf23d57cf627ad/i/m/image1_600x.jpg",
+            name: "Lotus Herbals Whiteglow Vitamin C Radiance Cream Spf 20",
+            price: "₹428.00",
+            strikedoffprice: "₹475.00",
+            disc: "10% off"
+            ,rate: 428
+            ,catagory:"skin"
+        },
+        {
+            imgurl: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/3/6/3699c478906105612174-2.jpg",
+            name: "WOW Skin Science Caffeine Face Serum",
+            price: "₹515.00",
+            strikedoffprice: "₹599.00",
+            disc: "14% off"
+            ,rate: 515
+            ,catagory:"skin"
+        },
+        {
+            imgurl: "https://www.beautybebo.com/pub/media/catalog/product/cache/9afc37bdf46fae888adf23d57cf627ad/8/9/8904304651284_1.jpg",
+            name: "WOW Skin Science Activated Charcoal Face Scrub",
+            price: "₹375.00",
+            strikedoffprice: "",
+            disc: ""
+            ,rate: 575
+            ,catagory:"skin"
+        },
+        {
+            imgurl: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/a/c/activated_charcoal_face_mask2.jpg",
+            name:"WOW Skin Science Activated Charcoal Face Mask",
+            price:"₹435.00",
+            strikedoffprice: "₹499.00",
+            disc:"13% off",
+            rate: 435
+            ,catagory:"skin"
+        },
+        {
+            imgurl: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/r/e/repair_shampoo_650-2_1_1.jpg",
+            name: "Dove Intense Repair Shampoo 650ml(650ml)",
+            price: "₹350.00",
+            strikedoffprice: "₹500.00",
+            disc: "30% off",
+            rate: 350
+            ,catagory: "Hair"
+        },
+        {
+            imgurl: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/8/8/88b239c8904311904281__1_.jpg",
+            name: "WOW Skin Science Himalayan Rose Conditioner",
+            price: "₹395.00",
+            strikedoffprice: "₹449.00",
+            disc: "12% off",
+            rate: 395.00
+            ,catagory: "Hair"
+        },
+        {
+            imgurl: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/8/8/88b239c8904311904281__1_.jpg",
+            name: "WOW Skin Science 10 In 1 Miracle Hair Oil",
+            price: "₹515.00",
+            strikedoffprice: "₹599.00",
+            disc: "14% off",
+            rate: 515
+            ,catagory: "Hair"
+        },
+        {
+            imgurl: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/d/4/d4fb39c8904311904267__1_.jpg",
+            name: "WOW Skin Science Moroccan Argan Hair Oil - WITH COMB APPLICATOR - Cold",
+            price: "₹349.00",
+            strikedoffprice: "",
+            disc: "",
+            rate: 349
+            ,catagory: "Hair"
+        },
+        {
+            imgurl: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/8/9/8908003416557_1.png",
+            name: "Organic Harvest Cleansing Milk With Essential Oils(100ml)",
+            price: "₹491.00",
+            strikedoffprice: "₹545.00",
+            disc: "10% off",
+            rate: 491
+            ,catagory: "Personal Care"
+        },
+        {
+            imgurl: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/6/8/680c9508904311903031__1_.jpg",
+            name: "WOW Skin Science Thai Body Massage Oil",
+            price: "₹540.00",
+            strikedoffprice: "₹599.00",
+            disc: "10% off",
+            rate: 540
+            ,catagory: "Personal Care"
+        },
+        {
+            imgurl: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/c/c/cca52498904311901341_1.jpg",
+            name: "WOW Skin Science Moroccan Rose Otto Foaming Body Wash",
+            price: "₹339.00",
+            strikedoffprice: "",
+            disc: "",
+            rate: 339
+            ,catagory: "Personal Care"
+        },
+        {
+            imgurl: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/4/0/407c3408908003416601_1.jpg",
+            name: "Organic Harvest Lavender Essential Oil",
+            price: "₹405.00",
+            strikedoffprice: "₹450.00",
+            disc: "10% off",
+            rate: 450
+            ,catagory: "Personal Care"
+        },
+        {
+            imgurl: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/3/1/31_7_4.jpg",
+            name: "Mamaearth Agent Apple Body Lotion For Kids With Apple & Oat Milk",
+            price: "₹351.00",
+            strikedoffprice: "₹399.00",
+            disc: "12% off",
+            rate: 351
+            ,catagory: "Mom & Baby Care"
+        },
+        {
+            imgurl: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/3/0/30_6_4.jpg",
+            name: "Mamaearth Brave Blueberry Body Lotion For Kids With Blueberry And Kokum Butter",
+            price: "₹351.00",
+            strikedoffprice: "₹399.00",
+            disc: "12% off",
+            rate: 351
+            ,catagory: "Mom & Baby Care"
+        },
+        {
+            imgurl: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/2/8/28_8_4.jpg",
+            name: "Mamaearth Major Mango Body Lotion For Kids With Mango Butter & Milk Protein",
+            price: "₹351.00",
+            strikedoffprice: "₹399.00",
+            disc: "12% off",
+            rate: 351
+            ,catagory: "Mom & Baby Care"
+        },
+        {
+            imgurl: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/2/5/25_13_1.jpg",
+            name: "Mamaearth Original Orange Body Lotion For Kids With Orange & Shea Butter",
+            price: "₹351.00",
+            strikedoffprice: "₹399.00",
+            disc: "12% off",
+            rate: 351
+            ,catagory: "Mom & Baby Care"
+        },
+        {
+            imgurl: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/2/7/277cf77missc00000081_1.jpg",
+            name: "Miss Claire Eyelash Glue - Clear Tone",
+            price: "₹322.00",
+            strikedoffprice: "₹350.00",
+            disc: "8% off",
+            rate: 322
+            ,catagory: "Eye"
+        },
+        {
+            imgurl: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/5/1/51c18ra5qzs._sl1500_.jpg",
+            name: "Faces Canada Ultime Pro Matte Play Eyeliner",
+            price: "₹604.00",
+            strikedoffprice: "₹649.00",
+            disc: "7% off",
+            rate: 604
+            ,catagory: "Eye"
+        },
+        {
+            imgurl: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/b/c/bcf6c6c8904052434726__2_.jpg",
+            name: "Colorbar Intensify Liquid Gel Eyeliner - Arabian Nights",
+            price: "₹699.00",
+            strikedoffprice: "₹750.00",
+            disc: "7% off",
+            rate: 699
+            ,catagory: "Eye"
+        },
+        {
+            imgurl: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/8/9/8904052409748-2.jpg",
+            name: "Colorbar Infinite 24Hrs Eyeliner",
+            price: "₹700.00",
+            strikedoffprice: "₹651.00",
+            disc: "7% off",
+            rate: 700
+            ,catagory: "Eye"
+        },
+        {
+            imgurl: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/s/8/s8.jpg",
+            name: "Calvin Klein Eternity For Men Eau De Parfum",
+            price: "₹3,468.00",
+            strikedoffprice: "₹3,650.00",
+            disc: "5% off",
+            rate: 700
+            ,catagory: "Fragrance"
+        },
+        {
+            imgurl: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/o/fo21.jpg",
+            name: "Fogg Bleu Series Island Fragrance Body Spray",
+            price: "₹255.00",
+            strikedoffprice: "",
+            disc: "",
+            rate: 700
+            ,catagory: "Fragrance"
+        },
+        {
+            imgurl: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/o/fo20.jpg",
+            name: "Fogg Force Fragrance Body Spray",
+            price: "₹230.00",
+            strikedoffprice: "",
+            disc: "7% off",
+            rate: 700
+            ,catagory: "Fragrance"
+        },
+        {
+            imgurl: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/o/fo19.jpg",
+            name: "Fogg Punch Fragrance Body Spray",
+            price: "₹230.00",
+            strikedoffprice: "",
+            disc: "",
+            rate: 700
+            ,catagory: "Fragrance"
+        },
+    ]
+
+
+// displayData(homeProDataArr1)
+        
+        var addcartArr=JSON.parse(localStorage.getItem('makeuplist')) || []
+        var addtowishArr= JSON.parse(localStorage.getItem('wishlist')) || []
+
+       document.querySelector('#btn1').addEventListener('click',Showfunc1)
+       function Showfunc1(){
+           let filtered= homeProDataArr1.filter(function(elem){
+               return elem.catagory== "makeup"
+           })
+           displayData(filtered)
+       }
+       document.querySelector('#btn2').addEventListener('click',Showfunc2)
+       function Showfunc2(){
+           let filtered= homeProDataArr1.filter(function(elem){
+               return elem.catagory== "skin"
+           })
+           displayData(filtered)
+       }
+       document.querySelector('#btn3').addEventListener('click',Showfunc3)
+       function Showfunc3(){
+           let filtered= homeProDataArr1.filter(function(elem){
+               return elem.catagory== "Hair"
+           })
+           displayData(filtered)
+       }
+       document.querySelector('#btn4').addEventListener('click',Showfunc4)
+       function Showfunc4(){
+           let filtered= homeProDataArr1.filter(function(elem){
+               return elem.catagory== "Personal Care"
+           })
+           displayData(filtered)
+       }
+       document.querySelector('#btn5').addEventListener('click',Showfunc5)
+       function Showfunc5(){
+           let filtered= homeProDataArr1.filter(function(elem){
+               return elem.catagory== "Mom & Baby Care"
+           })
+           displayData(filtered)
+       }
+       document.querySelector('#btn6').addEventListener('click',Showfunc6)
+       function Showfunc6(){
+           let filtered= homeProDataArr1.filter(function(elem){
+               return elem.catagory== "Eye"
+           })
+           displayData(filtered)
+       }
+       document.querySelector('#btn7').addEventListener('click',Showfunc7)
+       function Showfunc7(){
+           let filtered= homeProDataArr1.filter(function(elem){
+               return elem.catagory== "Fragrance"
+           })
+           displayData(filtered)
+       }
+
+
+        function displayData(data){
+        document.querySelector('#fifthbox2').innerHTML= "";
+
+        data.forEach(function(elem) {
+
+            var box= document.createElement('div')
+
+
+            var img= document.createElement('img')
+            img.setAttribute("src", elem.imgurl)
+
+            // var sale= document.createElement('span')
+            // sale.innerText= "Sale"
+            // sale.setAttribute("class","logo")
+
+            var namebox= document.createElement('div')
+            namebox.setAttribute('class',"namebox")
+
+            var name= document.createElement('p')
+            name.innerText= elem.name
+
+            var smallbox= document.createElement('div')
+
+            smallbox.setAttribute('class',"pricebox")
+
+                var price= document.createElement('p')
+                price.innerText= elem.price
+
+                var strike = document.createElement('strike')
+                strike.innerText= elem.strikedoffprice
+
+
+                var disc= document.createElement('p')
+                disc.innerText= elem.disc
+
+            var smallbox2 = document.createElement('div')
+            smallbox2.setAttribute("class","cartbox")
+
+                var wish= document.createElement('button')
+                wish.innerHTML= `<i class="fa-solid fa-heart"></i>`
+                wish.setAttribute('class','wish')
+                wish.addEventListener('click',function(){
+                    addtowishfunc(elem);
+                })
+
+                var cart= document.createElement('button')
+                cart.innerText = "🛒 Add to Cart"
+                cart.setAttribute("class","cart")
+                cart.addEventListener('click',function(){
+                    addcartfunc(elem)
+                })
+
+            namebox.append(name)
+            smallbox.append(strike,price,disc)
+            smallbox2.append(cart,wish)
+            box.append(img,namebox,smallbox,smallbox2)
+            document.querySelector('#fifthbox2').append(box)
+        });
+    }
+  
+  
+    function addcartfunc(elem){
+        var exist = addcartArr.filter(function(el){
+            return elem.name == el.name
+        })
+        if(exist.length>0){
+            alert('Added already')
+        }
+        else{
+            alert('Added to cart')
+             addcartArr.push(elem)
+            localStorage.setItem('makeuplist',JSON.stringify(addcartArr))
+            // console.log(addcartArr)
+        }
+
+    }
+    function addtowishfunc(elem){
+        var exist = addtowishArr.filter(function(el){
+            return elem.name == el.name
+        })
+        if(exist.length>0){
+            alert('Added already')
+        }
+        else{
+            alert('Added to Wishlist')
+            addtowishArr.push(elem)
+            localStorage.setItem('wishlist',JSON.stringify(addtowishArr))
+            console.log(addtowishArr)
+        }
+    }
+</script>
         

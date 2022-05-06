@@ -26,7 +26,7 @@
 #homeslidingimg {
     width: 75%;
     height: 100%;
-    position: relative;
+    /* position: relative; */
 }
 
 #homeslidingimg>img {
@@ -34,8 +34,9 @@
     width: 100%;
 }
 #one,#two,#three{
-    position: absolute;background-color: blue;
-    bottom: 5px;height: 15px;width: 15px;
+    position: absolute;
+    background-color: #dd0285;
+    bottom: 5px;height: 10px;width: 10px;
     border-radius: 50%;cursor: pointer;
 }
 #one{
@@ -134,10 +135,14 @@
 }
 
 #addcart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin: auto;
     text-align: center;
     width: auto;
-    height: auto;
+    height: 30px;;
+    /* border: 1px solid black; */
     /* border-radius: 5px; */
 }
 
@@ -147,21 +152,24 @@
 
 #addcart>button:nth-child(1) {
     margin: auto;
-    padding: 0px 15px;
+    padding-top: 0px;
+    padding-bottom:15px;
+    padding-right: 15px;
     border-radius: 5px;
     border: 0px;
     background-color: #dd0285;
     color: white;
-    height: auto;
+    height: 100%;
+    
 }
 
 #addcart>button:nth-child(2) {
-    height: auto;
-    padding: 5px 10px;
-    border-radius: 5px;
+    background-color: rgb(77, 75, 75);
     border: 0px;
-    background-color: rgb(69, 67, 67);
+    border-radius: 4px;
     color: white;
+    width: 28px;
+    height: 100%;
 }
 
 /* .fa-heart{
