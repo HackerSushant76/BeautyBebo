@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="cart.css">
+    <script src="https://kit.fontawesome.com/6d49b9dc2e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+     <!-- // Navigation bar Start-->
+     <div id="header">
+        <img src="https://www.beautybebo.com/pub/media/ads/ad-desktop.jpg" alt="header_image">
+    </div>
+    <div id="searchbar">
+        <img src="https://www.beautybebo.com/pub/media/logo/default/beautybebo_1.png" alt="beautybeboLogo">
+        <div id="category">
+            <select name="category" id="category2" >
+                <option value="All Catagories">All Categories</option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+            </select>
+            <span>|</span>
+            <input type="text" placeholder="Enter your seacrh..." id="search">
+            <div id="fa1">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+        </div>
+        <div id="category3">
+            <div id="fa2">
+                <i class="fa-solid fa-heart"></i>
+            </div>
+            <div id="fa3">             
+                <i class="fa-solid fa-user-large"></i>
+            </div> 
+            <p>My Account</p>
+        </div>
+        
+    </div>
+    <div id="thirddiv">
+        <div id="thirddiv1">
+            <div id="categoryselector">
+                <select name="" id="">
+                    <option value="none">MAKEUP</option>
+                </select>
+                <select name="skin" id="">
+                    <option value="skin">SKIN</option>
+                </select>            
+                <select name="hair" id="">
+                    <option value="makeup">HAIR</option>
+                </select>
+                <select name="personalCare" id="">
+                    <option value="makeup">PERSONAL CARE</option>
+                </select>
+                <select name="Mom&babyCare" id="">
+                    <option value="makeup">MOM & BABY CARE</option>
+                </select>
+                <select name="fragrance" id="">
+                    <option value="makeup">FRAGRANCE</option>
+                </select>
+                <select name="ayurveda" id="">
+                    <option value="makeup">AYURVAEDA</option>
+                </select>
+                <select name="brands" id="">
+                    <option value="makeup">BRANDS</option>
+                </select>
+            </div>
+            <div id="mycart">
+                <a href="#"> <i class="fa-solid fa-bag-shopping"></i></a>
+                <a href="#">MY CART</a>
+            </div>
+        </div>
+            
+    </div>
+    <!-- // Navigation bar end-->
+
+    <!-- Cart page start -->
+    <div  class="shoppingcart">
+        <p>SHOPPING CART</p>
+    </div>
+    <div id="maincartbox">
+        <div id="cartbox">
+            <div id="detailsbox">
+                <div id="detailsboxitem">ITEM</div>
+                <div id="detailsboxremaining">
+                    <div id="pricetag">PRICE</div>
+                    <div id="qtytag">QTY</div>
+                    <div id="totaltag">SUBTOTAL</div>  
+                </div>
+            </div>
+        </div>
+        <form id="summarybox">
+            <h3>SUMMARY</h3>
+            <button>ESTIMATE SHIPPING AND TAX <i class=" fa1st fa-solid fa-angle-down"></i></button>
+            <hr>
+            <div id="subtotal">
+                <div ><P>Subtotal</P></div>
+                <div >₹10000.00</div>
+            </div>
+            <hr>
+            <div id="shipping">
+                <div><p>Shipping (Best Way - Max 7 Business days)</p></div>
+                <div>₹0.00</div>
+            </div>
+            <hr>
+            <div id="ordertotal">
+                <div><p>Order Total Incl. GST</p></div>
+                <div>₹10000.00</div>
+            </div>
+            <hr>
+            <button id="applydiscount">APPLY DISCOUNT CODE<i class=" fa2nd fa-solid fa-angle-down"></i></button>
+            <hr>
+            <button id="proceedtocheckout">PROCEED TO CHECHKOUT</button>
+        </form>
+    </div>
+</body>
+</html>
+<script src="cart.js"></script>
