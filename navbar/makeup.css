@@ -1,10 +1,14 @@
 #container{
     /* border : 1px solid red; */
+    float: right;
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: auto;
     width: 70%;
     box-sizing: border-box;
+}
+.filt{
+   margin-left: 450px;
 }
 #container>div{
     border: 1px solid rgb(224, 224, 224);

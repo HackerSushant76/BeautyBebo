@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 90%;
+            /* background-color: red; */
+            margin: auto;
+        }
+        .row{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        ul{
+            list-style-type: none;
+        }
+        .footer{
+            background-color:#232323 ;
+            padding: 20px;
+            /* margin-top: 35%; */
+        }
+        .footer-col{
+            width: 25%;
+            padding: 0 15px;
+        }
+        .footer-col h4{
+            font-size: 18px;
+            color: #ffffff;
+            text-transform: capitalize;
+            margin-bottom: 30px;
+            position:relative;
+
+        }
+        .footer-col ul li:not(:last-child){
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a{
+            text-decoration: none;
+            font-size: 16px;
+            color: gray;
+            text-transform: capitalize;
+            font-weight: 300;
+            display: block;
+            transition: all 0.3s ease;
+        }
+        .footer-col ul li a:hover{
+            color:#DD0285;
+            padding: 5px;
+        }
+        .fi{
+           line-height: 1.9; 
+        }
+        .fiii{
+            line-height: 0.7;
+        }
+        .bimg{
+            width: 90%;
+            /* border: 1px solid #DD0285; */
+            display: flex;
+            
+            justify-content: space-between;
+            margin: auto;
+            margin-top: 20px;
+        }
+        input{
+            width: 400px;
+            height: 50px;
+        }
+        button{
+            width: 100px;
+            height: 50px;
+            border: none;
+            background-color: #DD0285;
+            font-weight: bolder;
+            color: #ffffff;
+            font-size: 16px;
+        }
+        button:hover{
+            cursor: pointer;
+            background-color: #ce95b7;
+        }
+        .line{
+            margin-top: 10px;
+        }
+       
+    </style>
+    <title>footer-part</title>
+</head>
+<body>
+    <footer class="footer">
+     <div class="container">
+      <div class="row">
+          <div class="footer-col">
+              <h4>CONTACT INFO</h4>
+              <ul>
+                  <li><a class="fi" href="#">(+91) 97990 30777</a></li>
+                  <li><a class="fiii" href="#">support@beautybebo.com</a></li>
+                  <li><a class="fiii" href="#">sales@beautybebo.com</a></li>
+                  <li><a class="fi" href="#">open time: 10:00AM - 7:00PM</a></li>
+                  <li><a class="spc" href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                  <li><a class="spc" href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                </ul>
+          </div>
+          <div class="footer-col">
+            <h4>QUICK LINKS</h4>
+            <ul>
+                <li><a class="fi" href="#">About us</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Return and Refund Policy</a></li>
+                <li><a href="#">Shipping Policy</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>CUSTOMER INFO</h4>
+            <ul>
+                <li><a class="fi" href="#">My Account</a></li>
+                <li><a href="#">Track your Order</a></li>
+                <li><a href="#">Order Returns</a></li>
+                <li><a href="#">Wishlist</a></li>
+                <li><a href="#">News & Events</a></li>
+                <li><a href="#">FAQ</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>CATEGORIES</h4>
+            <ul>
+                <li><a class="fi" href="#">Makeup</a></li>
+                <li><a href="#">Skin</a></li>
+                <li><a href="#">Hair</a></li>
+                <li><a href="#">Personal Care</a></li>
+                <li><a href="#">Mom & Baby Care</a></li>
+                <li><a href="#">Fregrance</a></li>
+                <li><a href="#">Ayurveda</a></li>
+            </ul>
+        </div>
+       
+    </div>   
+    <hr class="line"> 
+     </div>
+     <div class="bimg">
+        <!-- <hr class="line"> -->
+          <div class="image">
+            <img src="https://www.beautybebo.com/pub/media/wysiwyg/payment.png" alt="">
+          </div>
+          <div class="input">
+            <input type="text" placeholder="Signup For News letters" name="search">
+            <button>Subscribe</button> 
+        </div>
+       
+     </div>
+    </footer>
+</body>
+</html>
