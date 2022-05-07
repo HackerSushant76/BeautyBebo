@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fragrance</title>
+    <link rel="stylesheet" href="makeup.css">
+</head>
+<body>
+    <select name="sort" id="sort">
+        <option value="basic">Sort By:-</option>
+        <option value="byname" >Name</option>
+        <option value="htl">Price: High to Low</option>
+        <option value="lth">Price: Low to High</option>
+    </select>
+    <div id="container"></div>
+</body>
+</html>
+<script>
+    fragrance= [
+        {
+            imgurl: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/s/8/s8.jpg",
+            name: "Calvin Klein Eternity For Men Eau De Parfum",
+            price: "₹3,468.00",
+            strikedoffprice: "₹3,650.00",
+            disc: "5% off",
+            rate: 322
+        },
+        {
+            imgurl: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/o/fo21.jpg",
+            name: "Fogg Bleu Series Island Fragrance Body Spray",
+            price: "₹255.00",
+            strikedoffprice: "",
+            disc: "",
+            rate: 475
+        },
+        {
+            imgurl: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/o/fo20.jpg",
+            name: "Fogg Force Fragrance Body Spray",
+            price: "₹230.00",
+            strikedoffprice: "",
+            disc: ""
+            ,rate: 735
+        },
+        {
+            imgurl: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/o/fo19.jpg",
+            name: "Fogg Punch Fragrance Body Spray",
+            price: "₹230.00 ",
+            strikedoffprice: "",
+            disc: ""
+            ,rate: 604
+        },
+        {
+            imgurl: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/o/fo18.jpg",
+            name: "Fogg Bleu Series Mountain Fragrance Body Spray",
+            price: "₹255.00",
+            strikedoffprice: "",
+            disc: ""
+            ,rate: 699
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/o/fo17.jpg",
+            name:"Fogg Rush Fragrance Body Spray",
+            price:"₹230.00",
+            strikedoffprice:"",
+            disc: ""
+            ,rate: 1378
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/o/fo16.jpg",
+            name:"Fogg Bleu Skies Fragrance Body Spray ",
+            price: "₹275.00",
+            strikedoffprice: "",
+            disc: ""
+            ,rate: 539
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/o/fo15.jpg",
+            name:"Fogg Scent Intensio Men Fragrance Body Spray",
+            price: "₹539.00",
+            strikedoffprice: "₹599.00",
+            disc: "10% off"
+            ,rate: 651
+        }
+        ,
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/o/fo13.jpg",
+            name:"Fogg Master Cedar Body Spray",
+            price: "₹275.00",
+            strikedoffprice: "",
+            disc: ""
+            ,rate: 495
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/o/fo12.jpg",
+            name:"Fogg Black Fresh Aromatic Fragrance Body Spray ",
+            price: "₹250.00",
+            strikedoffprice: "",
+            disc: ""
+            ,rate: 675
+        }
+        ,
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/o/fo10.jpg",
+            name:"Fogg Master Agar Body Spray",
+            price: "₹275.00",
+            strikedoffprice: "",
+            disc: ""
+            ,rate: 299
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/o/fo9.jpg",
+            name:"Fogg Black Fresh Fougere Body Spray Deodorant For Men",
+            price: "₹250.00",
+            strikedoffprice: "",
+            disc: ""
+            ,rate: 299
+        }
+        ,
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/o/fo8.jpg",
+            name:"Fogg Scent Xpressio Men Fragrance Body Spray",
+            price: "₹539.00",
+            strikedoffprice: "₹599.00",
+            disc: "10% off"
+            ,rate: 539
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/o/fo7.jpg",
+            name:"Fogg Dynamic Fragrance Body Spray",
+            price: "₹250.00",
+            strikedoffprice: "",
+            disc: ""
+            ,rate: 539
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/o/fo6.jpg",
+            name:"Fogg Scent Xtremo Men Fragrance Body Sprayr",
+            price: "₹539.00",
+            strikedoffprice: "₹599.00",
+            disc: "10% off"
+            ,rate: 338
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/o/fo5.jpg",
+            name:"Fogg Black Fresh Spicy Body Spray Deodorant For Men",
+            price: "₹234.00",
+            strikedoffprice: "₹275.00",
+            disc: "15% off"
+            ,rate: 1425
+        }
+        ,
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/o/fo3.jpg",
+            name:"Fogg Master Oak Body Spray",
+            price: "₹275.00",
+            strikedoffprice: "",
+            disc: ""
+            ,rate: 450
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/o/fo1.jpg",
+            name:"Fogg Master Pine Body Spray",
+            price: "₹275.00",
+            strikedoffprice: "",
+            disc: ""
+            ,rate: 920
+        }
+        ,
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/r/r/rr.jpg",
+            name:"Fogg Scent Beautiful Secret Women Fragrance Body Spray",
+            price: "₹539.00",
+            strikedoffprice: "₹599.00",
+            disc: "10% off"
+            ,rate: 759
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/e/5/e55.jpg",
+            name:"Engage Yin Eau De Parfum For Men",
+            price: "₹459.00",
+            strikedoffprice: "₹499.00",
+            disc: "8% off"
+            ,rate: 325
+        }
+        ,
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/e/5/e54.jpg",
+            name:"Engage Sport Cool Deodorant For Women, Citrus & Spicy, Skin Friendly",
+            price: "₹195.00",
+            strikedoffprice: "",
+            disc: ""
+            ,rate: 446
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/e/5/e52.jpg",
+            name:"Engage Sport Fresh Deodorant For Women",
+            price: "₹195.00",
+            strikedoffprice: "",
+            disc: ""
+            ,rate: 539
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/e/5/e51.jpg",
+            name:"Engage Spell Deodorant For Women",
+            price: "₹210.00",
+            strikedoffprice: "",
+            disc: ""
+            ,rate: 299
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/e/4/e49.jpg",
+            name:"Denver Esteem Hamilton Perfume",
+            price: "₹448.00",
+            strikedoffprice: "₹499.00",
+            disc: "10% off"
+            ,rate: 299
+        }
+        ,
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/d/3/d36.jpg",
+            name:"Denver Noble Hamilton Deodorant Body Spray",
+            price: "₹210.00",
+            strikedoffprice: "",
+            disc: ""
+            ,rate: 449
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/d/3/d35.jpg",
+            name:"Denver Imperial Deodorant For Men",
+            price: "₹212.00",
+            strikedoffprice: "₹240.00",
+            disc: "15% off"
+            ,rate: 689
+        }
+        ,
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/d/3/d34.jpg",
+            name:"Denver Prestige Deodorant For Men - Hamilton",
+            price: "₹249.00",
+            strikedoffprice: "",
+            disc: ""
+            ,rate: 889
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/d/3/d33.jpg",
+            name:"Denver Honour Hamilton Deo",
+            price: "₹249.00",
+            strikedoffprice: "",
+            disc: ""
+            ,rate: 299
+        }
+        ,
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/d/3/d32.jpg",
+            name:"Denver SRK Emperor Deodorant Autograph Collection - 150ml",
+            price: "₹212.00",
+            strikedoffprice: "₹249.00",
+            disc: "15% off"
+            ,rate: 545
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/d/3/d31.jpg",
+            name:"Denver Sporting Club Goal Perfume - 60ml",
+            price: "₹257.00",
+            strikedoffprice: "₹299.00",
+            disc: "14% off"
+            ,rate: 539
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/d/3/d30.jpg",
+            name:"Denver Insight Eau De Perfume",
+            price: "₹448.00",
+            strikedoffprice: "₹499.00",
+            disc: "10% off"
+            ,rate: 450
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/d/2/d29.jpg",
+            name:"Denver Sporting Club Rider Deo",
+            price: "₹179.00",
+            strikedoffprice: "₹210.00",
+            disc: "15% off"
+            ,rate: 299
+        }
+        ,
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/d/2/d28.jpg",
+            name:"Denver Hamilton Caliber Perfume - 100ml",
+            price: "₹448.00",
+            strikedoffprice: "₹499.00",
+            disc: "10% off"
+            ,rate: 449
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/d/2/d27.jpg",
+            name:"Denver Sporting Club - Victor Deo - 165ml",
+            price: "₹179.00",
+            strikedoffprice: "₹210.00",
+            disc: "15% off"
+            ,rate: 449
+        }
+        ,
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/d/2/d26.png",
+            name:"Denver Hamilton Imperial Perfume",
+            price: "₹257.00",
+            strikedoffprice: "₹299.00",
+            disc: "14% off"
+            ,rate: 643
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/d/2/d25.jpg",
+            name:"Denver Royal Oud Deo - Hamilton",
+            price: "₹179.00",
+            strikedoffprice: "₹210.00",
+            disc: "15 % off"
+            ,rate: 299
+        }
+        ,
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/d/2/d24.jpg",
+            name:"Denver Hamilton Imperial Perfume - 100ml",
+            price: "₹448.00",
+            strikedoffprice: "₹499.00",
+            disc: "10% off"
+            ,rate: 549
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/d/2/d23.jpg",
+            name:"Denver Hamilton Deo",
+            price: "₹212.00",
+            strikedoffprice: "₹240.00",
+            disc: "15% off"
+            ,rate: 288
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/d/2/d22.jpg",
+            name:"Denver Caliber Deodorant For Men - Hamilton",
+            price: "₹212.00",
+            strikedoffprice: "₹240.00",
+            disc: "15% off"
+            ,rate: 549
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/3/7/37_4_1.jpg",
+            name:"Denver Pride Hamilton Deo",
+            price: "₹212.00",
+            strikedoffprice: "₹249.00",
+            disc: "15% off"
+            ,rate: 799
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/d/2/d20.png",
+            name:"Denver Black Code Perfume",
+            price: "₹212.00",
+            strikedoffprice: "₹249.00",
+            disc: "15% off"
+            ,rate: 949
+        },
+       
+    ]
+
+
+    document.querySelector('#sort').addEventListener('change',sortByNameFunc)
+        function sortByNameFunc(){
+            var selected = document.querySelector('#sort').value
+            // console.log(selected)
+           
+            if(selected=="byname"){
+                fragrance.sort(function(a,b){
+                var x= a.name;
+                var y= b.name;
+                if(x>y){
+                    return 1;
+                }
+                else if(x<y){
+                    return -1;
+                }
+                else{
+                    return 0;
+                }
+                
+            })   
+            // console.log(skinpArr)
+            displayData(fragrance)
+            }
+            else if(selected=="htl"){
+                fragrance.sort(function(a,b){
+                    var x = a.rate;
+                    var y = b.rate;
+                    if(x<y){
+                        return 1;
+                    }
+                    else if(x>y){
+                        return -1;
+                    }
+                    else{
+                        return 0;
+                    }
+                })
+                displayData(fragrance)
+                // console.log(fragrance)
+            }
+            else if(selected=="lth"){
+                fragrance.sort(function(a,b){
+                    var x = a.rate;
+                    var y = b.rate;
+                    if(x>y){
+                        return 1;
+                    }
+                    else if(x<y){
+                        return -1;
+                    }
+                    else{
+                        return 0;
+                    }
+                })
+                displayData(fragrance)
+                console.log(fragrance)
+            }
+            
+        }
+
+
+    displayData(fragrance);
+        var addcartArr=JSON.parse(localStorage.getItem('makeuplist')) || []
+        var addtowishArr= JSON.parse(localStorage.getItem('wishlist')) || []
+    function displayData(data){
+        document.querySelector('#container').innerText= "";
+
+        fragrance.forEach(function(elem) {
+            
+            var box= document.createElement('div')
+
+            var img= document.createElement('img')
+            img.setAttribute("src", elem.imgurl)
+
+            var sale= document.createElement('span')
+            sale.innerText= "Sale"
+            sale.setAttribute("id","logo")
+            
+            var namebox= document.createElement('div')
+            namebox.setAttribute('id',"namebox")
+
+            var name= document.createElement('p')
+            name.innerText= elem.name
+
+            var smallbox= document.createElement('div')
+            
+            smallbox.setAttribute('id',"pricebox")
+
+                var strike = document.createElement('strike')
+                strike.innerText= elem.strikedoffprice
+
+                var price= document.createElement('p')
+                price.innerText= elem.price
+
+                var disc= document.createElement('p')
+                disc.innerText= elem.disc
+
+            var smallbox2 = document.createElement('div')
+            smallbox2.setAttribute("id","cartbox")
+
+                var wish= document.createElement('button')
+                wish.innerText= "♡"
+                wish.setAttribute('id','wish')
+                wish.addEventListener('click',function(){
+                    addtowishfunc(elem);
+                })
+
+                var cart= document.createElement('button')
+                cart.innerText = "🛒 Add to Cart"
+                cart.setAttribute("id","cart")
+                cart.addEventListener('click',function(){
+                    addcartfunc(elem)
+                })
+
+            namebox.append(name)
+            smallbox.append(strike,price,disc)
+            smallbox2.append(cart,wish)
+            box.append(img,sale,namebox,smallbox,smallbox2)
+            document.querySelector('#container').append(box)
+        });
+    }
+    function addcartfunc(elem){
+        var exist = addcartArr.filter(function(el){
+            return elem.name == el.name
+        })
+        if(exist.length>0){
+            alert('Added already')
+        }
+        else{
+            alert('Added to cart')
+             addcartArr.push(elem)
+            localStorage.setItem('makeuplist',JSON.stringify(addcartArr))
+            // console.log(addcartArr)
+        }
+       
+    }
+    function addtowishfunc(elem){
+        var exist = addtowishArr.filter(function(el){
+            return elem.name == el.name
+        })
+        if(exist.length>0){
+            alert('Added already')
+        }
+        else{
+            alert('Added to Wishlist')
+            addtowishArr.push(elem)
+            localStorage.setItem('wishlist',JSON.stringify(addtowishArr))
+            console.log(addtowishArr)
+        }
+       
+    }
+</script>

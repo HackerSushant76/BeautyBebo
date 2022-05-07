@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>personal_care</title>
+    <link rel="stylesheet" href="makeup.css">
+</head>
+<body>
+    <select name="sort" id="sort">
+        <option value="basic">Sort By:-</option>
+        <option value="byname" >Name</option>
+        <option value="htl">Price: High to Low</option>
+        <option value="lth">Price: Low to High</option>
+    </select>
+    <div id="container"></div>
+</body>
+</html>
+<script>
+    personal_care= [
+        {
+            imgurl: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/8/9/8908003416557_1.png",
+            name: "Organic Harvest Cleansing Milk With Essential Oils",
+            price: "₹491.00",
+            strikedoffprice: "₹545.00",
+            disc: "10% off",
+            rate: 322
+        },
+        {
+            imgurl: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/6/8/680c9508904311903031__1_.jpg",
+            name: "Wow Skin Science Thai Body Massage Oil",
+            price: "₹540.00",
+            strikedoffprice: "₹599.00",
+            disc: "10% off",
+            rate: 475
+        },
+        {
+            imgurl: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/c/c/cca52498904311901341_1.jpg",
+            name: "Wow Skin Science Moroccan Rose Otto Foaming Body Wash",
+            price: "₹339.00",
+            strikedoffprice: "",
+            disc: ""
+            ,rate: 735
+        },
+        {
+            imgurl: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/4/0/407c3408908003416601_1.jpg",
+            name: "Organic Harvest Lavender Essential Oil",
+            price: "₹405.00 ",
+            strikedoffprice: "₹450.00",
+            disc: "10% off"
+            ,rate: 604
+        },
+        {
+            imgurl: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/d/c/dcc62fd8904311902386_1.jpg",
+            name: "WOW Skin Science Ubtan Bodye Wash",
+            price: "₹339.00",
+            strikedoffprice: "",
+            disc: ""
+            ,rate: 699
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/v/a/va109.jpg",
+            name:"Mamaearth Vitamin C Nourishing Bathing Soap With",
+            price:"₹299.00",
+            strikedoffprice:"",
+            disc: ""
+            ,rate: 1378
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/v/a/va106.jpg",
+            name:"Mamaearth Coco Nourishing Bathing Soap With Coffee ",
+            price: "₹299.00",
+            strikedoffprice: "",
+            disc: ""
+            ,rate: 539
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/v/a/va103.jpg",
+            name:"Mamaearth Tea Tree Nourishing Bathing Soap With Tea Tree And",
+            price: "₹299.00",
+            strikedoffprice: "",
+            disc: ""
+            ,rate: 651
+        }
+        ,
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/v/a/va101.jpg",
+            name:"Mamaearth Ubtan Nourishing Bathing Soap With Turmeric",
+            price: "₹299.00",
+            strikedoffprice: "",
+            disc: ""
+            ,rate: 495
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/v/a/va99.jpg",
+            name:"Mamaearth Natural Nourishing Bathing Soaps ",
+            price: "₹299.00",
+            strikedoffprice: "",
+            disc: ""
+            ,rate: 675
+        }
+        ,
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/v/a/va92.jpg",
+            name:"Mamaearth Charcoal Nourishing Bathing Soap With",
+            price: "₹299.00",
+            strikedoffprice: "",
+            disc: ""
+            ,rate: 299
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/_/9/.9.jpg",
+            name:"Ponds Super Light Gel Oil Free Moisturiser With Hyaluronic",
+            price: "₹538.00",
+            strikedoffprice: "₹598.00",
+            disc: "10% off"
+            ,rate: 299
+        }
+        ,
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/v/a/va15.jpg",
+            name:"Vaadi Herbals Enticing Lemongrass Shower Gel",
+            price: "₹230.00",
+            strikedoffprice: "",
+            disc: ""
+            ,rate: 299
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/4/0/4045787429534.jpg",
+            name:"Schwarzkopf Professional Bonacure Hyaluronic Moisture",
+            price: "₹950.00",
+            strikedoffprice: "₹1,000.00",
+            disc: "5% Off"
+            ,rate: 539
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/v/a/va11.jpg",
+            name:"Vaadi Herbals Breezy Olive & Green Apple Shower Gel",
+            price: "₹230.00",
+            strikedoffprice: "",
+            disc: ""
+            ,rate: 338
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/b/e/be219.jpg",
+            name:"Vaadi Herbals Refreshing Lemon & Basil Shower Gel",
+            price: "₹245.00",
+            strikedoffprice: "",
+            disc: ""
+            ,rate: 1425
+        }
+        ,
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/b/e/be211.jpg",
+            name:"Vaadi Herbals Enchanting Rose & Mogra Shower Gel",
+            price: "₹245.00",
+            strikedoffprice: "",
+            disc: ""
+            ,rate: 450
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/b/e/be186.jpg",
+            name:"O3+ D-Tan Liposoluble Wax (Italian Formula)",
+            price: "₹911.00",
+            strikedoffprice: "₹990.00",
+            disc: "7% off"
+            ,rate: 920
+        }
+        ,
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/b/e/be168.jpeg",
+            name:"Beeone Professional Aloevera Liposoluble Wax",
+            price: "₹842.00",
+            strikedoffprice: "₹990.00",
+            disc: " 15% off"
+            ,rate: 759
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/b/e/be167.jpeg",
+            name:"Beeone Professional Argan Oil Liposoluble Wax",
+            price: "₹842.00",
+            strikedoffprice: "₹990.00",
+            disc: " 15% off"
+            ,rate: 325
+        }
+        ,
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/b/e/be166.jpeg",
+            name:"Beeone Professional Charcoal Liposoluble Wax",
+            price: "₹842.00",
+            strikedoffprice: "₹990.00",
+            disc: "15% off"
+            ,rate: 446
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/b/e/be165.jpeg",
+            name:"Beeone Professional Avocado Liposoluble Wax",
+            price: "₹842.00",
+            strikedoffprice: "₹990.00",
+            disc: "15% off"
+            ,rate: 539
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/b/e/be164.jpeg",
+            name:"Beeone Professional De Tan Liposoluble Wax",
+            price: "₹842.00",
+            strikedoffprice: "₹990.00",
+            disc: "15% off"
+            ,rate: 299
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/b/e/be163.jpeg",
+            name:"Beeone Professional Dark Chocolate Liposoluble Wax",
+            price: "₹842.00",
+            strikedoffprice: "₹990.00",
+            disc: "15% off"
+            ,rate: 299
+        }
+        ,
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/b/e/be162.jpeg",
+            name:"Beeone Professional White Chocolate Liposoluble Wax",
+            price: "₹842.00",
+            strikedoffprice: "₹990.00",
+            disc: "15% off"
+            ,rate: 449
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/b/e/be161.jpg",
+            name:"Beeone Green Apple Milky Wax",
+            price: "₹248.00",
+            strikedoffprice: "₹310.00",
+            disc: "20% off"
+            ,rate: 689
+        }
+        ,
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/b/e/be160.jpg",
+            name:"Beeone Fairness Milky Wax",
+            price: "₹279.00",
+            strikedoffprice: "₹310.00",
+            disc: "10% off"
+            ,rate: 889
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/b/e/be159.jpg",
+            name:"Beeone Bridal Milky Wax",
+            price: "₹248.00",
+            strikedoffprice: "₹310.00",
+            disc: "20% off"
+            ,rate: 299
+        }
+        ,
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/b/e/be158.jpg",
+            name:"Beeone Banana Milky Wax",
+            price: "₹248.00",
+            strikedoffprice: "₹310.00",
+            disc: "20% off"
+            ,rate: 545
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/b/e/be157.jpg",
+            name:"Beeone Strawberry Milky Wax",
+            price: "₹279.00",
+            strikedoffprice: "₹310.00",
+            disc: "10% off"
+            ,rate: 539
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/b/e/be156.jpg",
+            name:"Beeone Pearl Milky Wax",
+            price: "₹248.00",
+            strikedoffprice: "₹310.00",
+            disc: "20% off"
+            ,rate: 450
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/b/e/be155.jpg",
+            name:"Beeone Orange Milky Wax",
+            price: "₹248.00",
+            strikedoffprice: "₹310.00",
+            disc: "20% off"
+            ,rate: 299
+        }
+        ,
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/b/e/be154.jpg",
+            name:"Beeone Milk Sensitive Milky Wax",
+            price: "₹279.00",
+            strikedoffprice: "₹310.00",
+            disc: "10% off"
+            ,rate: 449
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/c/3/c35.jpg",
+            name:"Colorbar Body Wash & Shower Gel - Malibu Sunset",
+            price: "₹311.00",
+            strikedoffprice: "₹345.00",
+            disc: "10% off"
+            ,rate: 449
+        }
+        ,
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/c/3/c34.jpg",
+            name:"Colorbar Body Wash & Shower Gel - Toast To Tahiti",
+            price: "₹311.00",
+            strikedoffprice: "₹345.00",
+            disc: "10% off"
+            ,rate: 643
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/s/1/s10.jpg",
+            name:"Fiama Blackcurrant & Bearberry Shower Gel - 500ml",
+            price: "₹359.00",
+            strikedoffprice: "₹399.00",
+            disc: "10% off"
+            ,rate: 299
+        }
+        ,
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/p/8/p8_1.jpg",
+            name:"Pears Oil Clear & Glow Body Wash",
+            price: "₹197.00",
+            strikedoffprice: "",
+            disc: ""
+            ,rate: 549
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/p/5/p5_1.jpg",
+            name:"Pears Naturale Detoxifying Aloevera Bodywash",
+            price: "₹197.00",
+            strikedoffprice: "",
+            disc: ""
+            ,rate: 288
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/p/2/p2_1.jpg",
+            name:"Pears Naturale Brightening Pomegranate Bodywash",
+            price: "₹197.00",
+            strikedoffprice: "",
+            disc: ""
+            ,rate: 549
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/d/o/do10.jpg",
+            name:"Dove Deeply Nourishing Body Wash",
+            price: "₹359.00",
+            strikedoffprice: "₹395.00",
+            disc: "9% off"
+            ,rate: 799
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/j/2/j23.jpg",
+            name:"Joy Mandarin & Green Tea Skin Purifying & Radiant Glow",
+            price: "₹884.00",
+            strikedoffprice: "₹950.00",
+            disc: "7%"
+            ,rate: 949
+        },
+       
+    ]
+
+
+    document.querySelector('#sort').addEventListener('change',sortByNameFunc)
+        function sortByNameFunc(){
+            var selected = document.querySelector('#sort').value
+            // console.log(selected)
+           
+            if(selected=="byname"){
+                personal_care.sort(function(a,b){
+                var x= a.name;
+                var y= b.name;
+                if(x>y){
+                    return 1;
+                }
+                else if(x<y){
+                    return -1;
+                }
+                else{
+                    return 0;
+                }
+                
+            })   
+            // console.log(skinpArr)
+            displayData(personal_care)
+            }
+            else if(selected=="htl"){
+                personal_care.sort(function(a,b){
+                    var x = a.rate;
+                    var y = b.rate;
+                    if(x<y){
+                        return 1;
+                    }
+                    else if(x>y){
+                        return -1;
+                    }
+                    else{
+                        return 0;
+                    }
+                })
+                displayData(personal_care)
+                // console.log(personal_care)
+            }
+            else if(selected=="lth"){
+                personal_care.sort(function(a,b){
+                    var x = a.rate;
+                    var y = b.rate;
+                    if(x>y){
+                        return 1;
+                    }
+                    else if(x<y){
+                        return -1;
+                    }
+                    else{
+                        return 0;
+                    }
+                })
+                displayData(personal_care)
+                console.log(personal_care)
+            }
+            
+        }
+
+
+    displayData(personal_care);
+        var addcartArr=JSON.parse(localStorage.getItem('makeuplist')) || []
+        var addtowishArr= JSON.parse(localStorage.getItem('wishlist')) || []
+    function displayData(data){
+        document.querySelector('#container').innerText= "";
+
+        personal_care.forEach(function(elem) {
+            
+            var box= document.createElement('div')
+
+            var img= document.createElement('img')
+            img.setAttribute("src", elem.imgurl)
+
+            var sale= document.createElement('span')
+            sale.innerText= "Sale"
+            sale.setAttribute("id","logo")
+            
+            var namebox= document.createElement('div')
+            namebox.setAttribute('id',"namebox")
+
+            var name= document.createElement('p')
+            name.innerText= elem.name
+
+            var smallbox= document.createElement('div')
+            
+            smallbox.setAttribute('id',"pricebox")
+
+                var strike = document.createElement('strike')
+                strike.innerText= elem.strikedoffprice
+
+                var price= document.createElement('p')
+                price.innerText= elem.price
+
+                var disc= document.createElement('p')
+                disc.innerText= elem.disc
+
+            var smallbox2 = document.createElement('div')
+            smallbox2.setAttribute("id","cartbox")
+
+                var wish= document.createElement('button')
+                wish.innerText= "♡"
+                wish.setAttribute('id','wish')
+                wish.addEventListener('click',function(){
+                    addtowishfunc(elem);
+                })
+
+                var cart= document.createElement('button')
+                cart.innerText = "🛒 Add to Cart"
+                cart.setAttribute("id","cart")
+                cart.addEventListener('click',function(){
+                    addcartfunc(elem)
+                })
+
+            namebox.append(name)
+            smallbox.append(strike,price,disc)
+            smallbox2.append(cart,wish)
+            box.append(img,sale,namebox,smallbox,smallbox2)
+            document.querySelector('#container').append(box)
+        });
+    }
+    function addcartfunc(elem){
+        var exist = addcartArr.filter(function(el){
+            return elem.name == el.name
+        })
+        if(exist.length>0){
+            alert('Added already')
+        }
+        else{
+            alert('Added to cart')
+             addcartArr.push(elem)
+            localStorage.setItem('makeuplist',JSON.stringify(addcartArr))
+            // console.log(addcartArr)
+        }
+       
+    }
+    function addtowishfunc(elem){
+        var exist = addtowishArr.filter(function(el){
+            return elem.name == el.name
+        })
+        if(exist.length>0){
+            alert('Added already')
+        }
+        else{
+            alert('Added to Wishlist')
+            addtowishArr.push(elem)
+            localStorage.setItem('wishlist',JSON.stringify(addtowishArr))
+            console.log(addtowishArr)
+        }
+       
+    }
+</script>

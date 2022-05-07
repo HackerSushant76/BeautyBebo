@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skin</title>
+    <link rel="stylesheet" href="makeup.css">
+</head>
+<body>
+    <select name="sort" id="sort">
+        <option value="basic">Sort By:-</option>
+        <option value="byname" >Name</option>
+        <option value="htl">Price: High to Low</option>
+        <option value="lth">Price: Low to High</option>
+    </select>
+    <div id="container"></div>
+</body>
+</html>
+<script>
+    skinArr= [
+        {
+            imgurl: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/i/m/image1_600x.jpg",
+            name: "Lotus Herbals Whiteglow Vitamin C Radiance Cream Spf 20",
+            price: "₹475.00",
+            strikedoffprice: "₹428.00",
+            disc: "10% off",
+            rate: 322
+        },
+        {
+            imgurl: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/3/6/3699c478906105612174-2.jpg",
+            name: "Wow Skin Science Caffeine Face Serum",
+            price: "₹515.00",
+            strikedoffprice: "₹599.00",
+            disc: "14% off",
+            rate: 475
+        },
+        {
+            imgurl: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/8/9/8904304651284_1.jpg",
+            name: "Wow Skin Science Activated Charcoal Face Scrub",
+            price: "₹375.00",
+            strikedoffprice: "",
+            disc: ""
+            ,rate: 735
+        },
+        {
+            imgurl: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/a/c/activated_charcoal_face_mask2.jpg",
+            name: "Wow Skin Science Activated Charcoal Face Mask",
+            price: "₹435.00 ",
+            strikedoffprice: "₹499.00",
+            disc: "13% off"
+            ,rate: 604
+        },
+        {
+            imgurl: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/0/f0c4f25lotus00000014.jpg",
+            name: "Lotus Organics+ Bakuchiol Plant Retinol Miracle Facial Oil",
+            price: "₹896.00",
+            strikedoffprice: "₹995.00",
+            disc: "10% off"
+            ,rate: 699
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/5/3/53f7f568906080030383_rvn1.jpg",
+            name:"Organic Harvest Masseuscious Damage Control Cleanser With Acai Berry",
+            price:"₹1,420.00",
+            strikedoffprice:"₹1,495.00",
+            disc: "5% off"
+            ,rate: 1378
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/8/9/8904311901495_1_1_.jpg",
+            name:"Wow Skin Science Am2pm Sunscreen Spf 50 Lotion",
+            price: "₹385.00",
+            strikedoffprice: "",
+            disc: ""
+            ,rate: 539
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/d/fd794d08904304373124.jpg",
+            name:"WOW Skin Science Activated Charcoal Peel Off Face Mask",
+            price: "₹399.00",
+            strikedoffprice: "",
+            disc: ""
+            ,rate: 651
+        }
+        ,
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/l/flowers-of-youth-essence-serum_2_1.jpg",
+            name:"Mamaearth Flowers Of Youth Essence Serum With Hyaluronic Acid & Hibiscus For Youthful",
+            price: "₹599.00",
+            strikedoffprice: "",
+            disc: ""
+            ,rate: 495
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/7/b/7ba61598904352001284_1.jpg",
+            name:"Biotique Advanced Organics Tea Tree Treament Oil Essential Oil For Face",
+            price: "₹504.00",
+            strikedoffprice: "₹560.00",
+            disc: "10% off"
+            ,rate: 675
+        }
+        ,
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/8/9/8904311901631_1.jpg",
+            name:"WOW Skin Science Kids Cool-The-Rays Sunscreen Cream - SPF 30+ PA+++",
+            price: "₹349.00",
+            strikedoffprice: "",
+            disc: ""
+            ,rate: 299
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/3/e/3eb5e308904311902874_1.jpg",
+            name:"WOW Skin Science Raw African Shea Body Butter",
+            price: "₹440.00",
+            strikedoffprice: "₹499.00",
+            disc: ""
+            ,rate: 299
+        }
+        ,
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/7/5/759639c8904311903499__1_.jpg",
+            name:"WOW Skin Science Apple Cider Vinegar Face Wash Bottle",
+            price: "₹399.00",
+            strikedoffprice: "",
+            disc: ""
+            ,rate: 299
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/a/a/aae1c478906105612136-2.jpg",
+            name:"WOW Skin Science Hyaluronic Acid Face Serum",
+            price: "₹630.00",
+            strikedoffprice: "₹699.00",
+            disc: "10% Off"
+            ,rate: 539
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/7/0/70bf0be8904311901860_1.jpg",
+            name:"WOW Skin Science Aloe Vera Multi-Vitamin Face Cream",
+            price: "₹540.00",
+            strikedoffprice: "₹599.00",
+            disc: "10% off"
+            ,rate: 338
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/e/e/ee32c478906105612372-2.jpg",
+            name:"WOW Skin Science Ubtan Face Serum",
+            price: "₹540.00",
+            strikedoffprice: "₹599.00",
+            disc: "10% off"
+            ,rate: 1425
+        }
+        ,
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/8/d/8d895398904311905103__5_.jpg",
+            name:"WOW Skin Science Himalayan Rose Foaming Face Wash With Built-In Face Brush WITH 50%",
+            price: "₹391.00",
+            strikedoffprice: "₹449.00",
+            disc: "10% off"
+            ,rate: 450
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/6/1/61a4f818904311904076_1.jpg",
+            name:"WOW Skin Science Green Tea Face Moisturizer",
+            price: "₹349.00",
+            strikedoffprice: "",
+            disc: ""
+            ,rate: 920
+        }
+        ,
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/b/2/b2917c28904311900818-_2_.jpg",
+            name:"WOW Skin Science Pink Rose Clay Face Mask",
+            price: "₹449.00",
+            strikedoffprice: "₹499.00",
+            disc: "10% off"
+            ,rate: 759
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/2/3/232439c8904311903550__1_.jpg",
+            name:"WOW Skin Science Ubtan Face Wash Bottle",
+            price: "₹399.00",
+            strikedoffprice: "",
+            disc: ""
+            ,rate: 325
+        }
+        ,
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/8/9/8904311901587_1__1.jpg",
+            name:"WOW Skin Science UV Water Transparent Sunscreen Spray SPF 30",
+            price: "₹399.00",
+            strikedoffprice: "",
+            disc: ""
+            ,rate: 446
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/9/b/9b82c478906105611962-2.jpg",
+            name:"WOW Skin Science Himalayan Rose Body Lotion",
+            price: "₹399.00", 
+            strikedoffprice: "",
+            disc: ""
+            ,rate: 539
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/a/0/a093c478906105615038-2.jpg",
+            name:"WOW Skin Science Aloe Vera Body Lotion Ultra Light Hydration - No Mineral Oil, Parabens",
+            price: "₹399.00",
+            strikedoffprice: "",
+            disc: ""
+            ,rate: 299
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/8/3/83cff25lotus00000011.jpg",
+            name:"Lotus Organics+ Bakuchiol Plant Retinol Super Serum",
+            price: "₹986.00",
+            strikedoffprice: "₹1,095.00",
+            disc: "10% off"
+            ,rate: 299
+        }
+        ,
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/5/b/5b9d6c8joyxx00000028_n1.jpg",
+            name:"Joy Calming Stress Relief & Relaxing Lavender Body Serum Lotion",
+            price: "₹275.00",
+            strikedoffprice: "",
+            disc: ""
+            ,rate: 449
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/d/9/d9ec6c8joyxx00000038_n1.jpg",
+            name:"Joy Natural Indulgent & Pampering Rose Body Serum Lotion",
+            price: "₹275.00",
+            strikedoffprice: "",
+            disc: ""
+            ,rate: 689
+        }
+        ,
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/8/d/8d9c6c8joyxx00000027_n1.jpg",
+            name:"Joy Relaxing Refreshing & Hydrating Green Tea Body Serum Lotion",
+            price: "₹275.00",
+            strikedoffprice: "",
+            disc: ""
+            ,rate: 889
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/7/3/731c6c8joyxx00000009_n1.jpg",
+            name:"Joy Vitamin C Glow Reviving & Skin Brightening Gel For Face & Body",
+            price: "₹299.00",
+            strikedoffprice: "",
+            disc: ""
+            ,rate: 299
+        }
+        ,
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/e/4/e4236c8joyxx00000024_n1.jpg",
+            name:"Joy Revivify Activated Charcoal Deep Detoxifying & Purifying Mask",
+            price: "₹265.00",
+            strikedoffprice: "",
+            disc: ""
+            ,rate: 545
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/2/a/2abe6c8joyxx00000023_n1.jpg",
+            name:"Joy Revivify Green Clay Mask Pore Clarifying & Pollution Defense Mask",
+            price: "₹265.00",
+            strikedoffprice: "",
+            disc: ""
+            ,rate: 539
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/7/6/76bdacd8992304017810_0.jpg",
+            name:"L'Oreal Paris Revitalift Hyaluronic Acid Plumping Day Cream",
+            price: "₹464.00",
+            strikedoffprice: "₹499.00",
+            disc: "7% off"
+            ,rate: 450
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/5/8/583d5ae4005808353149new.jpg",
+            name:"NIVEA Body Lotion For Normal Skin, Express Hydration, For Fast Absorption",
+            price: "₹367.00",
+            strikedoffprice: "₹399.00",
+            disc: "8% off"
+            ,rate: 299
+        }
+        ,
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/a/5/a5c9a458906080039225_1.jpg",
+            name:"Organic Harvest Vitamin B Organic Face Serum With Spinach & Niacinamide",
+            price: "₹731.00",
+            strikedoffprice: "₹795.00",
+            disc: "8% off"
+            ,rate: 449
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/8/a/8ada0a1joyxx00000032_2.jpg",
+            name:"Joy Revivify Hyaluronic + Hydra Boosting Intensive Repair Ultimate Hydrating Serum",
+            price: "₹315.00",
+            strikedoffprice: "₹349.00",
+            disc: "10% off"
+            ,rate: 449
+        }
+        ,
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/a/c/acf40a1joyxx00000031_2.jpg",
+            name:"Joy Revivify Retinol + Eternal Youth Age Defying Skin Firming Serum",
+            price: "₹315.00",
+            strikedoffprice: "₹349.00",
+            disc: "10% off"
+            ,rate: 643
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/c/fcab0a1joyxx00000034_1.jpg",
+            name:"Joy Revivify AHA + BHA Glow Revealing Even Tone Skin Refiling Serum",
+            price: "₹315.00",
+            strikedoffprice: "₹349.00",
+            disc: "10% off"
+            ,rate: 299
+        }
+        ,
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/a/f/af610a1joyxx00000033_2.jpg",
+            name:"Joy Revivify Collagen + Nutrition Surge Night Repair Moisture Restoring Serum",
+            price: "₹315.00",
+            strikedoffprice: "₹349.00",
+            disc: "10% off"
+            ,rate: 549
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/3/c/3c9c0a1joyxx00000030_2.jpg",
+            name:"Joy Revivify Vitamin C + Bright Radiance Spot Reduction Skin Brightening Serum",
+            price: "₹315.00",
+            strikedoffprice: "₹349.00",
+            disc: "10% off"
+            ,rate: 288
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/4/3/43a6fecnivea00000064_1.jpg",
+            name:"Nivea Soft Light Moisturizer Cream Peppy Pomegranate For Hands And Body",
+            price: "₹325.00",
+            strikedoffprice: "",
+            disc: ""
+            ,rate: 549
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/c/f/cf7485b4005900144652_1.jpg",
+            name:"NIVEA Refreshing Aloe Hydration Cream For Face- Body & Hands",
+            price: "₹299.00",
+            strikedoffprice: "",
+            disc: ""
+            ,rate: 799
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/6/0/6005fecnivea00000061_1.jpg",
+            name:"Nivea Soft Light Moisturizer Cream Playful Peach For Hands And Body",
+            price: "₹325.00",
+            strikedoffprice: "",
+            disc: ""
+            ,rate: 949
+        },
+       
+    ]
+
+
+    document.querySelector('#sort').addEventListener('change',sortByNameFunc)
+        function sortByNameFunc(){
+            var selected = document.querySelector('#sort').value
+            // console.log(selected)
+           
+            if(selected=="byname"){
+                skinArr.sort(function(a,b){
+                var x= a.name;
+                var y= b.name;
+                if(x>y){
+                    return 1;
+                }
+                else if(x<y){
+                    return -1;
+                }
+                else{
+                    return 0;
+                }
+                
+            })   
+            // console.log(skinpArr)
+            displayData(skinArr)
+            }
+            else if(selected=="htl"){
+                skinArr.sort(function(a,b){
+                    var x = a.rate;
+                    var y = b.rate;
+                    if(x<y){
+                        return 1;
+                    }
+                    else if(x>y){
+                        return -1;
+                    }
+                    else{
+                        return 0;
+                    }
+                })
+                displayData(skinArr)
+                // console.log(skinArr)
+            }
+            else if(selected=="lth"){
+                skinArr.sort(function(a,b){
+                    var x = a.rate;
+                    var y = b.rate;
+                    if(x>y){
+                        return 1;
+                    }
+                    else if(x<y){
+                        return -1;
+                    }
+                    else{
+                        return 0;
+                    }
+                })
+                displayData(skinArr)
+                console.log(skinArr)
+            }
+            
+        }
+
+
+    displayData(skinArr);
+        var addcartArr=JSON.parse(localStorage.getItem('makeuplist')) || []
+        var addtowishArr= JSON.parse(localStorage.getItem('wishlist')) || []
+    function displayData(data){
+        document.querySelector('#container').innerText= "";
+
+        skinArr.forEach(function(elem) {
+            
+            var box= document.createElement('div')
+
+            var img= document.createElement('img')
+            img.setAttribute("src", elem.imgurl)
+
+            var sale= document.createElement('span')
+            sale.innerText= "Sale"
+            sale.setAttribute("id","logo")
+            
+            var namebox= document.createElement('div')
+            namebox.setAttribute('id',"namebox")
+
+            var name= document.createElement('p')
+            name.innerText= elem.name
+
+            var smallbox= document.createElement('div')
+            
+            smallbox.setAttribute('id',"pricebox")
+
+                var strike = document.createElement('strike')
+                strike.innerText= elem.strikedoffprice
+
+                var price= document.createElement('p')
+                price.innerText= elem.price
+
+                var disc= document.createElement('p')
+                disc.innerText= elem.disc
+
+            var smallbox2 = document.createElement('div')
+            smallbox2.setAttribute("id","cartbox")
+
+                var wish= document.createElement('button')
+                wish.innerText= "♡"
+                wish.setAttribute('id','wish')
+                wish.addEventListener('click',function(){
+                    addtowishfunc(elem);
+                })
+
+                var cart= document.createElement('button')
+                cart.innerText = "🛒 Add to Cart"
+                cart.setAttribute("id","cart")
+                cart.addEventListener('click',function(){
+                    addcartfunc(elem)
+                })
+
+            namebox.append(name)
+            smallbox.append(strike,price,disc)
+            smallbox2.append(cart,wish)
+            box.append(img,sale,namebox,smallbox,smallbox2)
+            document.querySelector('#container').append(box)
+        });
+    }
+    function addcartfunc(elem){
+        var exist = addcartArr.filter(function(el){
+            return elem.name == el.name
+        })
+        if(exist.length>0){
+            alert('Added already')
+        }
+        else{
+            alert('Added to cart')
+             addcartArr.push(elem)
+            localStorage.setItem('makeuplist',JSON.stringify(addcartArr))
+            // console.log(addcartArr)
+        }
+       
+    }
+    function addtowishfunc(elem){
+        var exist = addtowishArr.filter(function(el){
+            return elem.name == el.name
+        })
+        if(exist.length>0){
+            alert('Added already')
+        }
+        else{
+            alert('Added to Wishlist')
+            addtowishArr.push(elem)
+            localStorage.setItem('wishlist',JSON.stringify(addtowishArr))
+            console.log(addtowishArr)
+        }
+       
+    }
+</script>
