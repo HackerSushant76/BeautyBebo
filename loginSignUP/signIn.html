@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="signin.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/af387dc509.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="headh4"><h4>CUSTOMER LOGIN</h4></div>
+    <div class="btn1">
+      <button class="loginBtn loginBtn--facebook">Login with Facebook</button>
+
+      <button class="loginBtn loginBtn--google">Login with Google</button>
+    </div>
+    <p class="or">-- OR --</p>
+    <div id="container">
+      <div id="signpart">
+        <!-- input section -->
+        <div id="logininput" class="crate">
+          <div class="login_head">REGISTRED CUSTOMERS</div>
+          <div class="loginText">
+            If you have an account, sign in with your email address.
+          </div>
+          <form action="" id="form">
+            <label for="email" class="label">Email*</label>
+
+            <input type="email" id="email" class="input_at" />
+            <label for="pass" class="label">Password* </label>
+            <input type="password" id="loginpass" class="input_at" />
+            <input class="btn2" type="submit" value="SIGN IN" />
+            <a href="#" id="forgotpwd"> Forgot Your Password?</a>
+          </form>
+          <!-- Button -->
+        </div>
+
+        <div id="login_crate" class="crate">
+          <div class="login_head">NEW CUSTOMERS</div>
+          <div class="loginText">
+            Creating an account has many benefits: check out faster, keep more
+            than one address, track orders and more.
+          </div>
+          <button class="loginBTN" onclick="gotocrate()">
+            CREATE AN ACCOUNT
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script src="signIn.js"></script>
+
+<!-- <script>
+  document.querySelector("#form").addEventListener("submit", mylogin);
+
+  var userData = JSON.parse(localStorage.getItem("userData"));
+  console.log(userData);
+
+  function mylogin() {
+    event.preventDefault();
+    var loginObj = {
+      email: form.email.value,
+      pass: form.loginpass.value,
+    };
+
+    for (var i = 0; i < userData.length; i++) {
+      if (userData[i] === null) {
+        return alert("Plese crate an Account!!");
+      } else if (
+        userData[i].email === loginObj.email &&
+        userData[i].pass == loginObj.pass
+      ) {
+        localStorage.setItem("usersign", JSON.stringify(userData[i]));
+        return alert("SignIN SucessFul!");
+        // window.location.href = "index.html";
+      } else {
+        return alert("Account not exists!! Plese Crate Account ");
+      }
+    }
+  }
+
+  function gotocrate() {
+    window.location.href = "signup.html";
+  } -->
+<!-- </script> -->
