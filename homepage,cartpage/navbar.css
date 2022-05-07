@@ -1,7 +1,7 @@
 
-*{
+/* *{
     margin: 0px;padding: 0px;
-}
+} */
 #header{
     background-image: url("https://www.beautybebo.com/pub/media/ads/ad-desktop.jpg");
     height:auto;width:auto;
@@ -17,6 +17,7 @@
 }
 #category2{
     width: 220px;height: 40px;padding: 20px;margin-right: 20px;border: 0px;
+    background-color: white;
 }
 #search{
     width: 250px;height: auto;margin-left: 20px;border: 0px;
@@ -36,12 +37,12 @@
 #fa3{
     padding: 12px;
 }
-#thirddiv{
+/* #thirddiv{
     width: 100%;height: 50px;background-color: #dd0285;
     position: sticky;top: 0px;
 }
 #thirddiv1{
-    width: 85%;height: 100%;border: 0px solid black;display: flex;justify-content: space-between;align-items: center;margin: auto;
+    width: 90%;height: 100%;border: 0px solid black;display: flex;justify-content: space-between;align-items: center;margin: auto;
 }
 #categoryselector{
     width: 70%;border: 0px solid green;height: 100%;display: grid;grid-template-columns: repeat(8,1fr);
@@ -66,4 +67,4 @@
 }
 .fa-bag-shopping{
     color: white;padding: 15px;margin-left: 10px;
-}
+} */

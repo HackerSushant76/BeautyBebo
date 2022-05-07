@@ -1,9 +1,14 @@
+*{
+    font-family: sans-serif;
+}
 #firstbox {
-    width: 85%;
+    width: 92%;
     height: 400px;
-    /* margin-top: 50px; */
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
     margin: auto;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+    
     display: flex;
 }
 
@@ -21,6 +26,8 @@
 #homecategory>p {
     margin-bottom: 5px;
     text-align: left;
+    font-size: 14px;
+    line-height: 20px;
 }
 
 #homeslidingimg {
@@ -52,9 +59,10 @@
     background-color: red;height: 15px;width: 50px;border-radius: 20px;
 }
 #secondbox {
-    width: 85%;
+    width: 92%;
     margin: auto;
     margin-top: 10px;
+    margin-bottom: 20px;
     border: 0px solid blue;
 }
 
@@ -64,7 +72,7 @@
 }
 
 #thirdbox1{
-    width: 85%;height: auto;margin: auto;
+    width: 92%;height: auto;margin: auto;
     margin-top: 10px;
 }
 #thirdbox1>h3{
@@ -75,7 +83,7 @@
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
     height: auto;
     margin: auto;
-    width: 85%;
+    width: 92%;
     display: flex;
     box-sizing: border-box;
     overflow: scroll;
@@ -135,15 +143,12 @@
 }
 
 #addcart {
+
+    bottom: 10px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: auto;
-    text-align: center;
     width: 200px;
-    height: 35px;
-    /* border: 1px solid black; */
-    /* border-radius: 5px; */
+    margin: auto;
+    height: auto;
 }
 
 .fa-bag-shopping {
@@ -151,23 +156,25 @@
 }
 
 #addcart>button:nth-child(1) {
+    display: block;
     margin: auto;
-    padding-right: 15px;
-    border-radius: 5px;
-    border: 0px;
-    background-color: #dd0285;
+    background-color: #DD0285;
+    border: 0px solid grey;
+    border-radius: 4px;
     color: white;
-    height: 100%;
+    height: 35px;
+    width: 80%;
+    font-size:14px;
     
 }
 
 #addcart>button:nth-child(2) {
-    background-color: rgb(77, 75, 75);
-    border: 0px;
-    border-radius: 4px;
-    color: white;
-    width: 28px;
-    height: 100%;
+     background-color: rgb(77, 75, 75);
+     border: 0px;
+     border-radius: 4px;
+     color: white;
+     width: 28px;
+     height: 35px;
 }
 
 /* .fa-heart{
@@ -176,11 +183,12 @@
 #fourthbox {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    width: 85%;
+    width: 92%;
     grid-template-rows: 1 auto;
     margin: auto;
     gap: 0px 30px;
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 #fourthbox>img {
@@ -189,7 +197,7 @@
 }
 
 #fifthbox1 {
-    width: 85%;
+    width: 92%;
     height: auto;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
     /* border: 1px solid salmon; */
@@ -215,11 +223,12 @@
     display: block;
     margin: auto;
     margin-top: 10px;
+    background-color: white;
 }
 
-#fifthbox1>div>img:hover {
-    color: white;
-}
+/* #fifthbox1>div>img:hover {
+    /* color: white */
+/* }  */
 
 #fifthbox1>div>p {
     text-align: center;
@@ -228,22 +237,31 @@
 }
 
 #fifthbox2 {
-    width: 85%;
+    width: 92%;
     margin: auto;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
     /* border: 1px solid saddlebrown; */
     display: flex;
 }
-
+#fifthbox2>div{
+    border: 1px solid rgb(236, 236, 236);
+    /* box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px; */
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    box-sizing: border-box;
+    width: 25%;
+}
 #sixthbox {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1 auto;
     gap: 30px;
     border: 0px solid red;
-    width: 85%;
+    width: 92%;
     margin: auto;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 #sixthboxinnerbox {
@@ -281,7 +299,7 @@
 }
 
 #seventhbox {
-    width: 85%;
+    width: 92%;
     margin: auto;
     margin-top: 30px;
 }
@@ -291,7 +309,7 @@
 }
 
 #eighthbox {
-    width: 85%;
+    width: 92%;
     margin: auto;
     font-size: 26px;
     color: grey;
@@ -302,14 +320,16 @@
 }
 
 #ninthbox {
-    width: 85%;
+    width: 92%;
     margin: auto;
     box-sizing: border-box;
+    margin-bottom: 10px;
 }
 
 #ninthbox>p {
     font-size: 14px;
-    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+    font-family: 'roboto';
     line-height: 25px;
 }
 
@@ -320,3 +340,158 @@
 #ninthbox>p>#bold {
     font-weight: 550;
 }
+/* navdrop */
+
+ /* Navigation Barr */
+ * {
+    margin: 0px;
+    }
+    #main {
+    display: flex;
+    border: 1px solid red;
+    background-color: #dd0285;
+    font-family: 'Roboto', sans-serif;
+    /* font-weight: bold ; */
+    height: 50px;
+    justify-content: space-between;
+    width: 100%;
+   
+    
+    
+    }
+    h4{
+      /* font-weight: bold; */
+      /* font-size: 15px; */
+    }
+    .names {
+    display: flex;
+    justify-content: space-evenly;
+    /* font-weight: 900; */
+    /* border: 1px solid green; */
+    width: 85%;
+    }
+    .names>div {
+    font-size: 14px;
+    color: white;
+    font-weight: bolder;
+    padding: 5px;
+    /* margin-top: 10px; */
+    }
+    .names>div>div {
+    margin-top: 10px;
+    }
+    .makeup1>div:first-child,
+    .skin1>div:first-child,
+    .hair1>div:first-child,
+    .personalcare1>div:first-child,
+    .mombaby1>div:first-child,
+    .fragrance1>div:first-child,
+    .ayurveda1>div:first-child,
+    .brands1>div:first-child {
+    display: flex;
+    }
+   
+    .navData {
+    /* border: 1px solid red; */
+    top: 36%;
+    left: 2%; 
+    /* left: -235px; */
+    width: 90%;
+    display: none;
+    z-index: 2;
+    background-color: white;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    /* text-align: center; */
+    }
+    .navData>div {
+    padding: 20px;
+    line-height: 25px;
+    font-size: 12px;
+    background-color: white;
+    /* text-align: center; */
+    /* text-align-last: center; */
+    }
+    li {
+    list-style: none;
+    margin-left: -40px;
+    color: #666666;
+    }
+    a {
+      /* text-align: center; */
+    text-decoration: none;
+    color: #666666
+    }
+    .names>div:hover {
+    background-color: #c60277;
+    cursor: pointer;
+    }
+    .names>div:hover select {
+    background-color: #c60277;
+    cursor: pointer;
+    }
+    .makeup1:hover .navData,
+    .skin1:hover .navData,
+    .hair1:hover .navData,
+    .personalcare1:hover .navData,
+    .mombaby1:hover .navData,
+    .fragrance1:hover .navData,
+    .ayurveda1:hover .navData,
+    .brands1:hover .navData {
+    display: flex;
+    flex-wrap: nowrap;
+    position: absolute;
+    }
+    .navData>div {
+    background-color: white;
+    }
+    select {
+    border: 0px;
+    background-color: #dd0285;
+    height: 20px;
+    color: white;
+    }
+    .cart {
+    width: 15%;
+    background-color: #dd0285;
+    margin-right: 25px;
+    
+    }
+    .cart>div {
+    display: flex;
+    margin-left: 30px;
+    margin-top: 15px;
+    color: white;
+    font-size: 14px;
+    font-weight: bolder;
+    cursor: pointer;
+    /* border: 1px solid blue; */
+    width: 200px;
+
+    }
+    .cart:hover{
+        background-color: #c60277;
+    }
+    p {
+    margin-right: 10px;
+    }
+    .navData>div>a {
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    /* font-weight: bolder; */
+    }
+    ul {
+    width: 100px;
+    }
+    .navData li>a:hover {
+    color: #dd0285;
+    }    
+    .brandBoxwidth{
+      
+     /* border: 1px solid gray; */
+     
+    padding: 10px;
+     height: 35px;
+     width: 70px;
+     margin: auto;
+     
+    }    

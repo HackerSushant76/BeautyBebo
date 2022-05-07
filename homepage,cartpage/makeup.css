@@ -15,11 +15,11 @@
     /* box-sizing: border-box; */
     position: relative;
 }
-#container img{
+/* #container img{
     width: 100%;
     display: block;
     margin: auto;
-}
+} */
 #logo{
     background-color: #DD0285;
     padding: 15px 10px 15px 10px;
