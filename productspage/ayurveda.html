@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ayurveda</title>
+    <link rel="stylesheet" href="makeup.css">
+</head>
+<body>
+    <select name="sort" id="sort">
+        <option value="basic">Sort By:-</option>
+        <option value="byname" >Name</option>
+        <option value="htl">Price: High to Low</option>
+        <option value="lth">Price: Low to High</option>
+    </select>
+    <div id="container"></div>
+</body>
+</html>
+<script>
+    ayurveda= [
+        {
+            imgurl: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/1/8/18_12_3.jpg",
+            name: "Vaadi Herbals Aloe Vera Face Scrub",
+            price: "₹285.00",
+            strikedoffprice: "",
+            disc: "",
+            rate: 322
+        },
+        {
+            imgurl: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/1/7/17_14_4.jpg",
+            name: "Vaadi Herbals 24 Carat Gold Massage Gel With 24 Carat Gold Dust & Grape Seed Extract",
+            price: "₹320.00",
+            strikedoffprice: "",
+            disc: "",
+            rate: 475
+        },
+        {
+            imgurl: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/o/4/o45.jpg",
+            name: "O3+ Volcano Scrub",
+            price: "₹450.00",
+            strikedoffprice: "₹499.00",
+            disc: "8% off"
+            ,rate: 735
+        },
+        {
+            imgurl: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/o/4/o41_1.jpg",
+            name: "O3+ Milk Scrub Dry Skin Dermal Zone",
+            price: "₹431.00 ",
+            strikedoffprice: "₹499.00",
+            disc: "12% off"
+            ,rate: 604
+        },
+        {
+            imgurl: "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/2/8/288.jpg",
+            name: "Himalaya Herbals Oil-Free Radiance Gel Cream",
+            price: "₹260.00",
+            strikedoffprice: "",
+            disc: ""
+            ,rate: 699
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/s/7/s7.jpg",
+            name:"Shahnaz Husain Shalocks Plus Ayurvedic Hair oil",
+            price:"₹710.00",
+            strikedoffprice:"₹640.00",
+            disc: "10% off"
+            ,rate: 1378
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/s/1/s1_1.jpg",
+            name:"Shahnaz Husain Gold 2-In-1 Anti Ageing Gel ",
+            price: "₹1,734.00",
+            strikedoffprice: "₹1,825.00",
+            disc: "5% off"
+            ,rate: 539
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/l/a/la9.jpg",
+            name:"L'oreal Paris White Perfect Scrub",
+            price: "₹400.00",
+            strikedoffprice: "",
+            disc: ""
+            ,rate: 651
+        }
+        ,
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/b/2/b28.jpg",
+            name:"Biotique Bio Sea Weed Revitalizing Anti Fatigue Eye Gel",
+            price: "₹199.00",
+            strikedoffprice: "",
+            disc: ""
+            ,rate: 495
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/b/2/b25.jpg",
+            name:"Bioderma Atoderm Intensive Gel Moussant",
+            price: "₹599.00",
+            strikedoffprice: "",
+            disc: ""
+            ,rate: 675
+        }
+        ,
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/c/1/c1.jpg",
+            name:"Cetaphil Sun Spf 30 Light Gel",
+            price: "₹1,070.00",
+            strikedoffprice: "₹1,150.00",
+            disc: "7% off"
+            ,rate: 299
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/b/3/b3.jpg",
+            name:"Biotique Advanced Organics Tea Tree Targeted Skin Clearing Gel",
+            price: "₹338.00",
+            strikedoffprice: "₹375.00",
+            disc: "10% off"
+            ,rate: 299
+        }
+        ,
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/j/6/j6.jpg",
+            name:"Joy Hydra Refresh Ultra Light Gel Moisturiser",
+            price: "₹170.00",
+            strikedoffprice: "",
+            disc: ""
+            ,rate: 539
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/b/e/be106.jpg",
+            name:"Beeone Papaya Scrub",
+            price: "₹394.00",
+            strikedoffprice: "₹499.00",
+            disc: "18% off"
+            ,rate: 539
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/b/e/be102_1.jpg",
+            name:"Beeone Papaya Facial Gel",
+            price: "₹210.00",
+            strikedoffprice: "₹270.00",
+            disc: "22% off"
+            ,rate: 338
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/b/e/be100.jpg",
+            name:"Beeone Oxygen Facial Gel",
+            price: "₹248.00",
+            strikedoffprice: "₹310.00",
+            disc: "20% off"
+            ,rate: 1425
+        }
+        ,
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/b/e/be97.jpg",
+            name:"Beeone Orange Facial Gel",
+            price: "₹210.00",
+            strikedoffprice: "₹270.00",
+            disc: "22% off"
+            ,rate: 450
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/b/e/be95.jpg",
+            name:"Beeone Neem Scrub",
+            price: "₹394.00",
+            strikedoffprice: "₹400.00",
+            disc: "18% off"
+            ,rate: 920
+        }
+        ,
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/b/e/be93.jpg",
+            name:"Beeone Neem And Tulsi Face Pack",
+            price: "₹230.00",
+            strikedoffprice: "₹290.00",
+            disc: "21% off"
+            ,rate: 759
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/b/e/be91.jpg",
+            name:"Beeone Mint Facial Gel",
+            price: "₹210.00",
+            strikedoffprice: "₹270.00",
+            disc: "22% off"
+            ,rate: 325
+        }
+        ,
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/b/e/be87.jpg",
+            name:"Beeone Manicure Pedicure Scrub",
+            price: "₹394.00",
+            strikedoffprice: "₹400.00",
+            disc: "18% off"
+            ,rate: 446
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/b/e/be85.jpg",
+            name:"Beeone Lemon Facial Gel",
+            price: "₹210.00",
+            strikedoffprice: "₹270.00",
+            disc: "22% off"
+            ,rate: 539
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/b/e/be84.jpg",
+            name:"Beeone Kesar Scrub",
+            price: "₹245.00",
+            strikedoffprice: "₹299.00",
+            disc: "18% off"
+            ,rate: 299
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/b/e/be79.jpg",
+            name:"Beeone Haldi And Chandan Face Pack 300ml",
+            price: "₹1,365.00",
+            strikedoffprice: "₹1,499.00",
+            disc: "9% off"
+            ,rate: 299
+        }
+        ,
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/b/e/be73.jpg",
+            name:"Beeone Gold Scrub",
+            price: "₹425.00",
+            strikedoffprice: "₹499.00",
+            disc: "15% off"
+            ,rate: 449
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/b/e/be69.jpg",
+            name:"Beeone Gold Facial Gel",
+            price: "₹290.00",
+            strikedoffprice: "₹430.00",
+            disc: "17% off"
+            ,rate: 689
+        }
+        ,
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/b/e/be65.jpg",
+            name:"Beeone Glow Scrub ",
+            price: "₹346.00",
+            strikedoffprice: "₹399.00",
+            disc: "13% off"
+            ,rate: 889
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/b/e/be63.jpg",
+            name:"Beeone Glow Scrub",
+            price: "₹346.00",
+            strikedoffprice: "₹399.00",
+            disc: "13% off"
+            ,rate: 299
+        }
+        ,
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/b/e/be63.jpg",
+            name:"Beeone Fruit Scrub ",
+            price: "₹299.00",
+            strikedoffprice: "",
+            disc: ""
+            ,rate: 545
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/b/e/be62.jpg",
+            name:"Beeone Fruit Facial Gel",
+            price: "₹125.00",
+            strikedoffprice: "",
+            disc: ""
+            ,rate: 539
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/b/e/be54.jpg",
+            name:"Beeone Cucumber Face Pack",
+            price: "₹270.00",
+            strikedoffprice: "₹324.00",
+            disc: "17% off"
+            ,rate: 450
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/b/e/be46.jpg",
+            name:"Beeone Diamond Facial Gel 440ml",
+            price: "₹299.00",
+            strikedoffprice: "",
+            disc: ""
+            ,rate: 299
+        }
+        ,
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/b/e/be45.jpg",
+            name:"Beeone Diamond Facial Gel",
+            price: "₹299.00",
+            strikedoffprice: "",
+            disc: ""
+            ,rate: 449
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/b/e/be43.jpg",
+            name:"Beeone Cucumber Facial Gel",
+            price: "₹199.00",
+            strikedoffprice: "",
+            disc: ""
+            ,rate: 449
+        }
+        ,
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/b/e/be40.jpg",
+            name:"Beeone Chocolate Scrub",
+            price: "₹249.00",
+            strikedoffprice: "",
+            disc: ""
+            ,rate: 643
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/b/e/be34.jpg",
+            name:"Beeone Apricot Scrub",
+            price: "₹298.00",
+            strikedoffprice: "",
+            disc: ""
+            ,rate: 299
+        }
+        ,
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/b/e/be33.jpg",
+            name:"Beeone Anti Tan Scrub",
+            price: "₹298.00",
+            strikedoffprice: "",
+            disc: ""
+            ,rate: 549
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/b/e/be28.jpg",
+            name:"Beeone Aloevera Scrub",
+            price: "₹346.00",
+            strikedoffprice: "₹399.00",
+            disc: "13% off"
+            ,rate: 288
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/b/e/be25.jpg",
+            name:"Beeone Aloevera Face Pack",
+            price: "₹299.00",
+            strikedoffprice: "",
+            disc: ""
+            ,rate: 549
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/b/e/be13.jpg",
+            name:"Beeone Aloevera Facial Gel",
+            price: "₹300.00",
+            strikedoffprice: "",
+            disc: ""
+            ,rate: 799
+        },
+        {
+            imgurl:"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/p/l/pl64.jpg",
+            name:"Plum Ban The Tan Combo - SPF50 + Face Scrub + Face Mask",
+            price: "₹342.00",
+            strikedoffprice: "₹399.00",
+            disc: "14% off"
+            ,rate: 949
+        },
+       
+    ]
+
+
+    document.querySelector('#sort').addEventListener('change',sortByNameFunc)
+        function sortByNameFunc(){
+            var selected = document.querySelector('#sort').value
+            // console.log(selected)
+           
+            if(selected=="byname"){
+                ayurveda.sort(function(a,b){
+                var x= a.name;
+                var y= b.name;
+                if(x>y){
+                    return 1;
+                }
+                else if(x<y){
+                    return -1;
+                }
+                else{
+                    return 0;
+                }
+                
+            })   
+            // console.log(skinpArr)
+            displayData(ayurveda)
+            }
+            else if(selected=="htl"){
+                ayurveda.sort(function(a,b){
+                    var x = a.rate;
+                    var y = b.rate;
+                    if(x<y){
+                        return 1;
+                    }
+                    else if(x>y){
+                        return -1;
+                    }
+                    else{
+                        return 0;
+                    }
+                })
+                displayData(ayurveda)
+                // console.log(ayurveda)
+            }
+            else if(selected=="lth"){
+                ayurveda.sort(function(a,b){
+                    var x = a.rate;
+                    var y = b.rate;
+                    if(x>y){
+                        return 1;
+                    }
+                    else if(x<y){
+                        return -1;
+                    }
+                    else{
+                        return 0;
+                    }
+                })
+                displayData(ayurveda)
+                console.log(ayurveda)
+            }
+            
+        }
+
+
+    displayData(ayurveda);
+        var addcartArr=JSON.parse(localStorage.getItem('makeuplist')) || []
+        var addtowishArr= JSON.parse(localStorage.getItem('wishlist')) || []
+    function displayData(data){
+        document.querySelector('#container').innerText= "";
+
+        ayurveda.forEach(function(elem) {
+            
+            var box= document.createElement('div')
+
+            var img= document.createElement('img')
+            img.setAttribute("src", elem.imgurl)
+
+            var sale= document.createElement('span')
+            sale.innerText= "Sale"
+            sale.setAttribute("id","logo")
+            
+            var namebox= document.createElement('div')
+            namebox.setAttribute('id',"namebox")
+
+            var name= document.createElement('p')
+            name.innerText= elem.name
+
+            var smallbox= document.createElement('div')
+            
+            smallbox.setAttribute('id',"pricebox")
+
+                var strike = document.createElement('strike')
+                strike.innerText= elem.strikedoffprice
+
+                var price= document.createElement('p')
+                price.innerText= elem.price
+
+                var disc= document.createElement('p')
+                disc.innerText= elem.disc
+
+            var smallbox2 = document.createElement('div')
+            smallbox2.setAttribute("id","cartbox")
+
+                var wish= document.createElement('button')
+                wish.innerText= "♡"
+                wish.setAttribute('id','wish')
+                wish.addEventListener('click',function(){
+                    addtowishfunc(elem);
+                })
+
+                var cart= document.createElement('button')
+                cart.innerText = "🛒 Add to Cart"
+                cart.setAttribute("id","cart")
+                cart.addEventListener('click',function(){
+                    addcartfunc(elem)
+                })
+
+            namebox.append(name)
+            smallbox.append(strike,price,disc)
+            smallbox2.append(cart,wish)
+            box.append(img,sale,namebox,smallbox,smallbox2)
+            document.querySelector('#container').append(box)
+        });
+    }
+    function addcartfunc(elem){
+        var exist = addcartArr.filter(function(el){
+            return elem.name == el.name
+        })
+        if(exist.length>0){
+            alert('Added already')
+        }
+        else{
+            alert('Added to cart')
+             addcartArr.push(elem)
+            localStorage.setItem('makeuplist',JSON.stringify(addcartArr))
+            // console.log(addcartArr)
+        }
+       
+    }
+    function addtowishfunc(elem){
+        var exist = addtowishArr.filter(function(el){
+            return elem.name == el.name
+        })
+        if(exist.length>0){
+            alert('Added already')
+        }
+        else{
+            alert('Added to Wishlist')
+            addtowishArr.push(elem)
+            localStorage.setItem('wishlist',JSON.stringify(addtowishArr))
+            console.log(addtowishArr)
+        }
+       
+    }
+</script>
