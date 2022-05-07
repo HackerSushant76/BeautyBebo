@@ -1,13 +1,26 @@
+#sort{
+    margin-left: 220px;
+    margin-top: 50px;
+    height: 50px;
+    width: 200px;
+    background-color:white;
+    color: black;
+    font-size:16px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
 #container{
-    /* border : 1px solid red; */
+    /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: auto;
     width: 70%;
     box-sizing: border-box;
+    margin-top: 50px;
+    margin-left: 220px;
+    margin-bottom: 50px;
 }
 #container>div{
-    border: 1px solid rgb(224, 224, 224);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     padding-left: 30px;
     padding-right: 30px;
     padding-bottom: 20px;
@@ -37,18 +50,19 @@
     height: 60px;
     /* border: 1px solid teal; */
     font-size: 14px;
+    text-align: center;
 }
 #pricebox{
-    width: 200px;
+    width: 220px;
     display: flex;
     justify-content: space-between;
     /* border: 1px solid brown; */
     margin: auto;
     margin-top: 0px;
-    /* margin-bottom: 70px; */
+    margin-bottom: 20px;
 }
 strike{
-    margin-top: 23px;
+    
     color: rgb(131, 126, 126);
     font-weight: 600;
 }
@@ -57,19 +71,20 @@ strike+p{
     font-size: 20px;
     color: #DD0285;
 }
-p+p{
+#pricebox>p:nth-child(3){
     font-weight: bold;
-    margin-top: 23px;
+    
     color: green;
 }
 #cartbox{
-    /* border: 1px solid purple; */
+    /* border: 1px solid blue; */
     /* position: absolute; */
     bottom: 10px;
     display: flex;
-    width: 170px;
+    width: 200px;
     margin: auto;
     height: 30px;
+    box-sizing: border-box;
 }
 
 #cart{
@@ -77,12 +92,15 @@ p+p{
     margin: auto;
     background-color: #DD0285;
     border: 0px;
-    padding: 5px 15px 5px 20px;
+    /* padding: 5px 15px 5px 20px; */
     color: white;
+    height: 30px;
+    width: 150px;
     
 }
 #wish{
-
+    width: 30px;
+    height: 30px;
     background-color: black;
     color: white;
     

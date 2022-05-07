@@ -421,6 +421,9 @@
     text-decoration: none;
     color: #666666
     }
+    .productselect{
+        color: white;
+    }
     .names>div:hover {
     background-color: #c60277;
     cursor: pointer;
@@ -495,3 +498,96 @@
      margin: auto;
      
     }    
+
+    /* footer css */
+    .container{
+        width: 90%;
+        /* background-color: red; */
+        margin: auto;
+    }
+    .row{
+        display: flex;
+        /* flex-wrap: wrap; */
+    }
+    ul{
+        list-style-type: none;
+    }
+    .footer{
+        background-color:#232323 ;
+        padding: 20px;
+        /* margin-top: 35%; */
+    }
+    .footer-col{
+        width: 25%;
+        padding: 0 15px;
+    }
+    .footer-col h4{
+        font-size: 18px;
+        color: #ffffff;
+        text-transform: capitalize;
+        margin-bottom: 30px;
+        position:relative;
+
+    }
+    .footer-col ul li:not(:last-child){
+        margin-bottom: 10px;
+    }
+
+    .footer-col ul li a{
+        text-decoration: none;
+        font-size: 16px;
+        color: gray;
+        text-transform: capitalize;
+        font-weight: 300;
+        display: block;
+        transition: all 0.3s ease;
+    }
+    .footer-col ul li a:hover{
+        color:#DD0285;
+        padding: 5px;
+    }
+    .fi{
+       line-height: 1.9; 
+    }
+    .fiii{
+        line-height: 0.7;
+    }
+    .bimg{
+        width: 90%;
+        /* border: 1px solid #DD0285; */
+        display: flex;
+        justify-content: space-between;
+        margin: auto;
+        margin-top: 20px;
+    }
+    .input{
+        width: 400px;
+        height: 50px;
+    }
+    #subscribe{
+        width: 100px;
+        height: 50px;
+        border: none;
+        background-color: #DD0285;
+        font-weight: bolder;
+        color: #ffffff;
+        font-size: 16px;
+    }
+    #subscribe:hover{
+        cursor: pointer;
+        background-color: #ce95b7;
+    }
+    .line{
+        margin-top: 10px;
+    }
+    #mycart{
+        color: white;
+    }
+    #myaccount{
+        border: none;
+        height: 30px;
+        font-size: 17px;
+        background-color:white;
+        color:black;
+        /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
+    }

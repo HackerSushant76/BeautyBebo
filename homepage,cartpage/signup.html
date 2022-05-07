@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MY Cart</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SignUp</title>
+    <link rel="stylesheet" href="signup.css" />
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="homepage.css">
-    <link rel="stylesheet" href="cart.css">
     <script src="https://kit.fontawesome.com/6d49b9dc2e.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,100&display=swap" rel="stylesheet">
-</head>
-<body>
+   
+  </head>
+  <body>
+
     <!-- // Navigation bar Start-->
     <div id="header">
         <img src="https://www.beautybebo.com/pub/media/ads/ad-desktop.jpg" alt="header_image">
@@ -38,7 +40,11 @@
             <div id="fa3">             
                 <i class="fa-solid fa-user-large"></i>
             </div> 
-            <p>My Account</p>
+            <select name="acc" id="myaccount" value="My Account">
+                <option value="">My Account</option>
+                <option value="Login">Login</option>
+                <option value="Register">Signup</option>
+            </select>
         </div>
         
     </div>
@@ -435,57 +441,184 @@
 
                     
                  </div>
-                  
-                   
-                 
-                 
+                                
               </div>
               
            </div>
         </div>
-            
-    </div>
-    <!-- // Navigation bar end-->
+        
 
-    <!-- Cart page start -->
-    <div  class="shoppingcart">
-        <p>SHOPPING CART</p>
-    </div>
-    <div id="maincartbox">
-        <div id="cartbox">
-            <div id="detailsbox">
-                <div id="detailsboxitem">ITEM</div>
-                <div id="detailsboxremaining">
-                    <div id="pricetag">PRICE</div>
-                    <div id="qtytag">QTY</div>
-                    <div id="totaltag">SUBTOTAL</div>  
-                </div>
-            </div>
+        <div class="cart">
+           <div>
+              <p><i class="fa-solid fa-bag-shopping"></i></p>
+              <a href="cart.html" id="mycart"><p>MY CART</p></a>
+              <p>-</p>
+              <p>₹0.00</p>
+           </div>
         </div>
-        <form id="summarybox">
-            <h3>SUMMARY</h3>
-            <button>ESTIMATE SHIPPING AND TAX <i class=" fa1st fa-solid fa-angle-down"></i></button>
-            <hr>
-            <div id="subtotal">
-                <div ><P>Subtotal</P></div>
-                <div >₹10000.00</div>
-            </div>
-            <hr>
-            <div id="shipping">
-                <div><p>Shipping (Best Way - Max 7 Business days)</p></div>
-                <div>₹0.00</div>
-            </div>
-            <hr>
-            <div id="ordertotal">
-                <div><p>Order Total Incl. GST</p></div>
-                <div>₹10000.00</div>
-            </div>
-            <hr>
-            <button id="applydiscount">APPLY DISCOUNT CODE<i class=" fa2nd fa-solid fa-angle-down"></i></button>
-            <hr>
-            <button id="proceedtocheckout">PROCEED TO CHECHKOUT</button>
-        </form>
+     </div>
+     </div>
+     </div>
+
+
+
+    <h3 class="firt-head">CREATE NEW CUSTOMER ACCOUNT</h3>
+    <div class="btnside">
+      <div class="fbBtn">
+        <button class="loginBtn loginBtn--facebook">
+          Sign in with Facebook
+        </button>
+
+        <button class="loginBtn loginBtn--google">Sign in with Google</button>
+      </div>
     </div>
-</body>
+    <p class="or">--OR--</p>
+    <div id="contenor">
+      <h3 class="h3">PERSONAL INFORMATION</h3>
+      <form action="" id="form">
+        <div>
+          <label class="fname" for="firstName">
+            <span>First Name <span class="star">*</span></span></label
+          >
+
+          <label class="lname" for="firstName">
+            <span>Last Name <span class="star">*</span></span></label
+          >
+          <br />
+          <div class="form-control">
+            <input id="fname" type="text" />
+
+            <input id="lname" type="text" /> <br />
+            <small></small>
+          </div>
+        </div>
+
+        <br />
+        <div class="form-control">
+          <input id="check" type="checkbox" />
+
+          <label for="checkbox">Sign Up for Newsletter </label> <br />
+          <small></small> <br />
+        </div>
+
+        <!-- email -->
+        <div class="form-control">
+          <label for="email">Email <span class="star">*</span></label>
+          <input type="email" id="email" class="pad" /> <br />
+          <small></small>
+        </div>
+        <!-- phone -->
+        <div class="form-control">
+          <label for="number">Phone <span class="star">*</span></label> <br />
+          <input id="phone" class="pad" type="number" />
+          <br /><small></small> <br />
+        </div>
+        <!-- password1 -->
+        <div class="form-control">
+          <label for="email">Password <span class="star">*</span></label> <br />
+          <input id="pass" class="pad" type="password" />
+          <br />
+          <small></small> <br />
+        </div>
+        <!-- password2 -->
+        <div class="form-control">
+          <label for="email"
+            >Confrim Password <span class="star">*</span></label
+          >
+          <br />
+          <input id="Rpass" class="pad" type="password" />
+          <br />
+          <small></small> <br />
+        </div>
+        <input id="btn" type="submit" name="" id="" value="CREATE AN ACCOUNT" />
+      </form>
+    </div>
+
+     <!-- footer starts -->
+     <footer class="footer">
+      <div class="container">
+       <div class="row">
+           <div class="footer-col">
+               <h4>CONTACT INFO</h4>
+               <ul>
+                   <li><a class="fi" href="#">(+91) 97990 30777</a></li>
+                   <li><a class="fiii" href="#">support@beautybebo.com</a></li>
+                   <li><a class="fiii" href="#">sales@beautybebo.com</a></li>
+                   <li><a class="fi" href="#">open time: 10:00AM - 7:00PM</a></li>
+                   <li><a class="spc" href="https://www.facebook.com/BeautyBebo-339715696750230/"><i class="fa-brands fa-facebook"></i></a></li>
+                   <li><a class="spc" href="https://www.instagram.com/beautybeboofficial/"><i class="fa-brands fa-instagram"></i></a></li>
+                 </ul>
+           </div>
+           <div class="footer-col">
+             <h4>QUICK LINKS</h4>
+             <ul>
+                 <li><a class="fi" href="#">About us</a></li>
+                 <li><a href="#">Contact Us</a></li>
+                 <li><a href="#">Terms & Conditions</a></li>
+                 <li><a href="#">Privacy Policy</a></li>
+                 <li><a href="#">Return and Refund Policy</a></li>
+                 <li><a href="#">Shipping Policy</a></li>
+             </ul>
+         </div>
+         <div class="footer-col">
+             <h4>CUSTOMER INFO</h4>
+             <ul>
+                 <li><a class="fi" href="#">My Account</a></li>
+                 <li><a href="#">Track your Order</a></li>
+                 <li><a href="#">Order Returns</a></li>
+                 <li><a href="#">Wishlist</a></li>
+                 <li><a href="#">News & Events</a></li>
+                 <li><a href="#">FAQ</a></li>
+             </ul>
+         </div>
+         <div class="footer-col">
+             <h4>CATEGORIES</h4>
+             <ul>
+                 <li><a class="fi" href="makeup.html">Makeup</a></li>
+                 <li><a href="#">Skin</a></li>
+                 <li><a href="#">Hair</a></li>
+                 <li><a href="#">Personal Care</a></li>
+                 <li><a href="#">Mom & Baby Care</a></li>
+                 <li><a href="#">Fregrance</a></li>
+                 <li><a href="#">Ayurveda</a></li>
+             </ul>
+         </div>
+        
+     </div>   
+     <hr class="line"> 
+      </div>
+      <div class="bimg">
+         <!-- <hr class="line"> -->
+           <div class="image">
+             <img src="https://www.beautybebo.com/pub/media/wysiwyg/payment.png" alt="">
+           </div>
+           <div>
+             <input class="input" type="text" placeholder="Signup For News letters" name="search">
+             <button id= "subscribe">Subscribe</button> 
+         </div>
+        
+      </div>
+     </footer>
+
+  </body>
 </html>
-<script src="cart.js"></script>
+<script src="signup.js"></script>
+
+<!-- <script>
+  document.querySelector("#form").addEventListener("submit", signUP);
+  var user_arr = [];
+  function signUP() {
+    event.preventDefault();
+    var obj_Arr = {
+      fName: form.fname.value,
+      lName: form.lname.value,
+      email: form.email.value,
+      phone: form.phone.value,
+      pass: form.pass.value,
+      Rpass: form.Rpass.value,
+    };
+    user_arr.push(obj_Arr);
+    localStorage.setItem("userData", JSON.stringify(user_arr));
+    window.location.href = "Sign.html";
+  }
+</script> -->

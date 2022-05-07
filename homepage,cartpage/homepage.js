@@ -24,3 +24,16 @@ function two(){
 function three(){
     document.querySelector("#slideimage1").src="https://www.beautybebo.com/pub/media/mega-menu/slider-3.jpg"
 }
+
+document.querySelector('#myaccount').addEventListener('change',Accountfunc)
+
+function Accountfunc(){
+    var selected= document.querySelector('#myaccount').value
+
+    if(selected== 'Login'){
+        window.location.href= "signIn.html"
+    }
+    else{
+        window.location.href= "signup.html"
+    }
+}

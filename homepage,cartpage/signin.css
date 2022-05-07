@@ -1,0 +1,244 @@
+#container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+  /* background-color: aqua; */
+  margin: 30px auto 30px auto;
+}
+.btn1 {
+  margin-left: 90px;
+  cursor: pointer;
+}
+
+.headh4 {
+  color: #444444;
+  font-size: 18px;
+  margin-left: 65px;
+  margin-top: 30px;
+  margin-bottom:20px;
+}
+
+.or {
+  font-size: 16px;
+  color: #444444;
+  margin-left: 22%;
+  margin-top: 20px;
+}
+#signpart {
+  width: 90%;
+  /* border:2px solid green; */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 30px;
+
+  margin-left: 5%;
+  margin-right: 5%;
+  grid-gap: 50px;
+  /* background-color: aliceblue; */
+}
+
+.crate {
+  border: 1px solid #cecece;
+
+  padding: 5%;
+}
+.crate > div {
+  margin-bottom: 6%;
+  /* border: 2px solid purple; */
+}
+.crate form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3%;
+  /* background-color: brown; */
+  /* padding: 2%; */
+}
+
+form input {
+  margin-top: 3%;
+  margin-bottom: 4%;
+  border: 1px solid #cecece;
+}
+.crate span button {
+  margin: 0%;
+}
+
+.crate span {
+  display: flex;
+  /* flex-direction: column; */
+  /* margin:7%; */
+  /* margin:0px;
+            padding: 0px; */
+  justify-content: space-between;
+  /* align-items: center; */
+}
+.crate button {
+  /* margin-left:7%; */
+  padding: 0%;
+  /* margin-right: 5%; */
+  height: 38px;
+  width: 31%;
+  color: white;
+  border: none;
+  background-color: rgb(71, 67, 67);
+  cursor: pointer;
+}
+.crate button:hover {
+  background-color: rgb(221, 2, 133);
+}
+.login_head {
+  cursor: pointer;
+  border-bottom: 1px solid #cecece;
+
+  color: #222222;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.loginText {
+  font-size: 14px;
+  color: #666666;
+}
+#forgotpwd {
+  text-decoration: none;
+  margin-left: 100px;
+  font-size: 16px;
+
+  color: #222222;
+}
+#forgotpwd:hover {
+  /* text-decoration: none; */
+  color: rgb(221, 2, 133);
+}
+
+.label {
+  color: #666666;
+  font-size: 14px;
+  margin-bottom: 2%;
+  margin-top: 1%;
+}
+.btn2 {
+  padding: 10px;
+  width: 100px;
+  font-size: 15px;
+  text-align: center;
+  background-color: #222222;
+  color: white;
+}
+.btn2:hover {
+  background-color: rgb(221, 2, 133);
+  cursor: pointer;
+  color: white;
+}
+
+.input_at {
+  height: 35px;
+  /* margin-bottom: 2%; */
+  font-size: 15px;
+}
+.star {
+  color: red;
+}
+.loginheader {
+  width: 72%;
+  font-size: 150%;
+  padding: 10px;
+  font-weight: 300;
+  /* border: 2px solid green; */
+  margin-left: 120px;
+  color: rgb(85, 83, 83);
+}
+
+.crate span button {
+  /* display: flex; */
+  /* flex-direction:; */
+  /* margin:7%;
+            border: 2px solid yellow; */
+  /* background-color: bisque; */
+  margin: 0%;
+}
+@media (max-width: 960px) {
+  #singnINpart {
+    /* width: 80%;
+            /* border:2px solid green; */
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    /* margin-top: 5%;
+            margin-left: 5%;
+            margin-right: 5%;
+            grid-gap: 50px; */
+  }
+  .crate button {
+    padding-left: 2%;
+    padding-left: 2%;
+  }
+}
+
+body {
+  padding: 2em;
+}
+
+/* Shared */
+.loginBtn {
+  box-sizing: border-box;
+  position: relative;
+  /* width: 13em;  - apply for fixed size */
+  margin: 0.2em;
+  padding: 0 15px 0 46px;
+  border: none;
+  text-align: left;
+  line-height: 34px;
+  white-space: nowrap;
+  border-radius: 0.2em;
+  font-size: 16px;
+  color: #fff;
+}
+.loginBtn:before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 34px;
+  height: 100%;
+}
+.loginBtn:focus {
+  outline: none;
+}
+.loginBtn:active {
+  box-shadow: inset 0 0 0 32px rgba(0, 0, 0, 0.1);
+}
+
+/* Facebook */
+.loginBtn--facebook {
+  background-color: #4c69ba;
+  background-image: linear-gradient(#4c69ba, #3b55a0);
+  /*font-family: "Helvetica neue", Helvetica Neue, Helvetica, Arial, sans-serif;*/
+  text-shadow: 0 -1px 0 #354c8c;
+}
+.loginBtn--facebook:before {
+  border-right: #364e92 1px solid;
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/icon_facebook.png")
+    6px 6px no-repeat;
+}
+.loginBtn--facebook:hover,
+.loginBtn--facebook:focus {
+  background-color: #5b7bd5;
+  background-image: linear-gradient(#5b7bd5, #4864b1);
+}
+
+/* Google */
+.loginBtn--google {
+  /*font-family: "Roboto", Roboto, arial, sans-serif;*/
+  background: #dd4b39;
+}
+.loginBtn--google:before {
+  border-right: #bb3f30 1px solid;
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/icon_google.png")
+    6px 6px no-repeat;
+}
+.loginBtn--google:hover,
+.loginBtn--google:focus {
+  background: #e74b37;
+}

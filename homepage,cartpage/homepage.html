@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="homepage.css">
     <link rel="stylesheet" href="homepro.css">
     <link rel="stylesheet" href="homepro1.css">
-    <link rel="stylesheet" href="footer.css">
     <script src="https://kit.fontawesome.com/6d49b9dc2e.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,100&display=swap" rel="stylesheet">
 </head>
@@ -19,7 +18,7 @@
         <img src="https://www.beautybebo.com/pub/media/ads/ad-desktop.jpg" alt="header_image">
     </div>
     <div id="searchbar">
-        <img src="https://www.beautybebo.com/pub/media/logo/default/beautybebo_1.png" alt="beautybeboLogo">
+        <a href="homepage.html"><img src="https://www.beautybebo.com/pub/media/logo/default/beautybebo_1.png" alt="beautybeboLogo" ></a>
         <div id="category">
             <select name="category" id="category2">
                 <option value="All Catagories">All Categories</option>
@@ -35,12 +34,16 @@
         </div>
         <div id="category3">
             <div id="fa2">
-                <i class="fa-solid fa-heart"></i>
+                <a href="wishlist.html"><i class="fa-solid fa-heart"></i></a>
             </div>
             <div id="fa3">             
                 <i class="fa-solid fa-user-large"></i>
             </div> 
-            <p>My Account</p>
+            <select name="acc" id="myaccount" value="My Account">
+                <option value="">My Account</option>
+                <option value="Login">Login</option>
+                <option value="Register">Signup</option>
+            </select>
         </div>
         
     </div>
@@ -50,7 +53,7 @@
         <div class="names">
            <div class="makeup1">
               <div>
-                 <h4>MAKEUP</h4>
+                 <h4 ><a class="productselect" href="makeup.html">MAKEUP</a> </h4>
                  <select name="smakeup" id="smakeup"></select>
               </div>
               <div class="navData">
@@ -140,7 +143,7 @@
            <!-- skin----- -->
            <div class="skin1">
               <div>
-                 <h4>SKIN</h4>
+                 <h4><a class="productselect" href="skin.html">SKIN</a> </h4>
                  <select name="smakeup" id="smakeup"></select>
               </div>
               <div class="navData">
@@ -205,7 +208,7 @@
            <!-- Hair -->
            <div class="hair1">
               <div>
-                 <h4>HAIR</h4>
+                 <h4><a class="productselect" href="hair.html">HAIR</a> </h4>
                  <select name="smakeup" id="smakeup"></select>
               </div>
               <div class="navData">
@@ -244,7 +247,7 @@
            <!-- personalCare -->
            <div class="personalcare1">
               <div>
-                 <h4>PERSONAL CARE</h4>
+                 <h4><a class="productselect" href="personal_care.html">PERSONAL CARE</a> </h4>
                  <select name="smakeup" id="smakeup"></select>
               </div>
               <div class="navData">
@@ -286,7 +289,7 @@
            <!-- momBabyCARE -->
            <div class="mombaby1">
               <div>
-                 <h4>MOM & BABY CARE</h4>
+                 <h4><a class="productselect" href="baby_care.html">MOM & BABYCARE</a> </h4>
                  <select name="smakeup" id="smakeup"></select>
               </div>
               <div class="navData">
@@ -321,7 +324,7 @@
            <!-- fragranace -->
            <div class="fragrance1">
               <div>
-                 <h4>FRAGRANCE</h4>
+                 <h4><a class="productselect" href="fragrance.html">FRAGRANCE</a> </h4>
                  <select name="smakeup" id="smakeup"></select>
               </div>
               <div class="navData">
@@ -342,7 +345,7 @@
            <!-- Ayurveda -->
            <div class="ayurveda1">
               <div>
-                 <h4>AYURVEDA</h4>
+                 <h4><a class="productselect" href="ayurveda.html">AYURVEDA</a> </h4>
                  <select name="smakeup" id="smakeup"></select>
               </div>
               <div class="navData">
@@ -386,7 +389,7 @@
            <!-- Brand -->
            <div class="brands1">
               <div>
-                 <h4>BRANDS</h4>
+                 <h4><a class="productselect" href="homepage.html">BRANDS</a> </h4>
                
                  <select name="smakeup" id="smakeup"></select>
               </div>
@@ -437,10 +440,7 @@
 
                     
                  </div>
-                  
-                   
-                 
-                 
+                                
               </div>
               
            </div>
@@ -450,7 +450,7 @@
         <div class="cart">
            <div>
               <p><i class="fa-solid fa-bag-shopping"></i></p>
-              <p>MY CART</p>
+              <a href="cart.html" id="mycart"><p>MY CART</p></a>
               <p>-</p>
               <p>₹0.00</p>
            </div>
@@ -459,45 +459,6 @@
      </div>
      </div>
 
-
-
-    <!-- <div id="thirddiv">
-        <div id="thirddiv1">
-            <div id="categoryselector">
-                <select name="" id="">
-                    <option value="none">MAKEUP</option>
-                </select>
-                <select name="skin" id="">
-                    <option value="skin">SKIN</option>
-                </select>            
-                <select name="hair" id="">
-                    <option value="makeup">HAIR</option>
-                </select>
-                <select name="personalCare" id="">
-                    <option value="makeup">PERSONAL CARE</option>
-                </select>
-                <select name="Mom&babyCare" id="">
-                    <option value="makeup">MOM & BABY CARE</option>
-                </select>
-                <select name="fragrance" id="">
-                    <option value="makeup">FRAGRANCE</option>
-                </select>
-                <select name="ayurveda" id="">
-                    <option value="makeup">AYURVAEDA</option>
-                </select>
-                <select name="brands" id="">
-                    <option value="makeup">BRANDS</option>
-                </select>
-            </div>
-            <div id="mycart">
-                <i class="fa-solid fa-bag-shopping"></i> -->
-                <!-- <a href="cart.html"> <i class="fa-solid fa-bag-shopping"></i></a>
-                <a href="cart.html">MY CART</a> -->
-                <!-- <p id="cart"> MY CART</p> -->
-            <!-- </div>
-        </div>
-            
-    </div> -->
     <!-- // Navigation bar end-->
 
     <!-- Homepage start -->
@@ -853,9 +814,9 @@
              <div class="image">
                <img src="https://www.beautybebo.com/pub/media/wysiwyg/payment.png" alt="">
              </div>
-             <div class="input">
-               <input type="text" placeholder="Signup For News letters" name="search">
-               <button>Subscribe</button> 
+             <div>
+               <input class="input" type="text" placeholder="Signup For News letters" name="search">
+               <button id= "subscribe">Subscribe</button> 
            </div>
           
         </div>
