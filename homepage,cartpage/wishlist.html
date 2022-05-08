@@ -642,7 +642,7 @@ strike+p{
 </html>
 
 <script>
-   var addtowishArr = JSON.parse(localStorage.getItem('wishlist')) || [];
+   var addtowishArr = JSON.parse(localStorage.getItem('wishlist')) ;
 //    console.log(addtowishArr)
     displayData(addtowishArr)
 
@@ -683,6 +683,7 @@ strike+p{
 
             var btn = document.createElement("button");
             btn.textContent = "ADD TO CART";
+            btn.addEventListener('click',addcartfunc)
 
             var btn2 = document.createElement("button");
             btn2.setAttribute("id","btn")
@@ -701,5 +702,9 @@ strike+p{
        })
 
    
+    }
+
+    function addcartfunc(elem){
+        alert('Added to cart')
     }
 </script>

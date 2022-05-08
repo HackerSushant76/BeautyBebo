@@ -108,4 +108,9 @@
 #proceedtocheckout{
     width: 100%;padding: 10px 20px;margin-bottom: 25px;margin-top: 20px;background-color: #dd0285;
     color: white;font-weight: bold;border: 0px;
+    
+}
+#success{
+    text-decoration: none;
+    color: white;
 }

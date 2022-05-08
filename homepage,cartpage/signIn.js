@@ -13,19 +13,21 @@
 
     for (var i = 0; i < userData.length; i++) {
       if (userData[i] === null) {
-        return alert("Plese create an Account!!");
+        return alert("Please create an Account!");
       } else if (
         userData[i].email === loginObj.email &&
-        userData[i].pass == loginObj.pass
+        userData[i].pass === loginObj.pass
       ) {
         localStorage.setItem("usersign", JSON.stringify(userData[i]));
-        return alert("SignIN SucessFul!");
          window.location.href = "index.html";
-      } else {
-        return alert("Account not exists!! Plese Create Account ");
+        return alert("SignIN SucessFul!");
+      }
+         
+       else {
+        return alert("Account does not exist! Please Create Account ");
       }
     }
-  }
+    }
 
   function gotocrate() {
     window.location.href = "signup.html";

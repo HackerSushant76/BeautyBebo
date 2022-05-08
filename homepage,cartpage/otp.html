@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP</title>
+    <style>
+      #cont{
+          width: 300px;
+          margin: auto;
+          margin-top: 150px;
+          background-color: pink;
+          padding: 100px;
+          padding-bottom: 130px;
+          text-align: center;
+      }  
+      #cont>button{
+          background-color: rgb(206, 41, 69);
+          color: white;
+      }
+
+    </style>
+</head>
+<body>
+    <div id="cont">
+        <h1>Enter OTP</h1>
+        <input type="number" name="" id="otp">
+        <button id="btn">Submit</button>
+    </div>
+    
+</body>
+</html>
+<script>
+    document.querySelector("#btn").addEventListener('click',otpfunc)
+    function otpfunc(){
+        obj= {
+            otp: document.querySelector('#otp').value
+        }
+        if(obj.otp== 1234){
+            alert("Payment succesful")
+            window.location.href= "sucessfully_order.html"
+        }
+    }
+</script>

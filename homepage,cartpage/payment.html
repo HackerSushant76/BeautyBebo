@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>payment page</title>
+    <style>
+        #box{
+            /* border: 1px solid red; */
+            width: 400px;
+            display: flex;
+            flex-direction: column;
+            height: 500px;
+            text-align: center;
+            margin: auto;
+            margin-top: 50px;
+            background-color: #e785c0;
+            color: white;
+            font-weight: bolder;
+            padding-bottom: 20px;
+        }
+        #box>form>input{
+            width: 280px;
+            height: 50px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <h1>Payment</h1>
+        <form action="" id="form">
+            <input type="text" id="card" placeholder="Enter your card number">
+            <input type="password" id="cvv" placeholder="Enter CVV number">
+            <input type="date" id="date" >
+            <input type="text" id="name" placeholder="Enter your Name">
+            <input type="submit">
+        </form>
+    </div>
+</body>
+</html>
+<script>
+    data={
+        card: "123456789012",
+        cvv: 999,
+        otp:1234
+    }
+    
+    document.querySelector('#form').addEventListener('submit',myfunc)
+    function myfunc(){
+        event.preventDefault()
+        var payobj= {
+            Card: form.card.value,
+            Cvv: form.cvv.value,
+            Date: form.date.value,
+            Name: form.name.value
+        }
+        if(payobj.Card== data.card && payobj.Cvv== data.cvv){
+            alert('Four digit OTP sent')
+            window.location.href= "otp.html"
+        }
+    }
+</script>

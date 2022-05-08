@@ -1,6 +1,20 @@
 var addcartArr=JSON.parse(localStorage.getItem('makeuplist')) || []
     // console.log(addcartArr)
     displayData(addcartArr);
+
+     
+    var sum= addcartArr.reduce(function(acc,elem){
+        return acc+ Number(elem.rate)
+    },0)
+    console.log(typeof(sum))
+    console.log(sum)
+    document.querySelector('#subt').append(sum)
+    
+    var total= sum + 100
+    document.querySelector('#total').append(total)
+
+
+
     function displayData(data){
         data.forEach(function(elem,index){
 // --------------------------// Cart items added here//----------------------------
