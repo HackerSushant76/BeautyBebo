@@ -6,4 +6,4 @@ This clone has all the functionality of a shopping website like Cart page, wishl
 Tech Stack used :
 -HTML
 -CSS 
-JavaScript
+-JavaScript
